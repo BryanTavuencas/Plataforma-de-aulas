@@ -1,0 +1,299 @@
+/* ========================================
+   VARIÁVEIS CSS
+   ======================================== */
+:root {
+    /* Cores principais */
+    --cor-primaria: #0066cc;
+    --cor-secundaria: #00cc99;
+    --cor-texto: #333333;
+    --cor-fundo: #ffffff;
+    
+    /* Espaçamentos */
+    --espacamento-pequeno: 8px;
+    --espacamento-medio: 16px;
+    --espacamento-grande: 24px;
+    
+    /* Fontes */
+    --fonte-principal: Arial, sans-serif;
+    --fonte-tamanho-base: 16px;
+}
+
+/* ========================================
+   RESET E ESTILOS GLOBAIS
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    font-size: var(--fonte-tamanho-base);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+/* ========================================
+   HEADER E NAVEGAÇÃO
+   ======================================== */
+header {
+    /* Estilos do header */
+}
+
+nav {
+    /* Estilos da navegação */
+}
+
+.logo {
+    /* Logo */
+}
+
+.nav-menu {
+    /* Menu de navegação */
+    list-style: none;
+}
+
+.nav-menu li {
+    /* Itens do menu */
+}
+
+.nav-menu a {
+    /* Links do menu */
+    text-decoration: none;
+}
+
+.user-actions {
+    /* Ações do usuário (login/logout) */
+}
+
+/* ========================================
+   LAYOUT PRINCIPAL
+   ======================================== */
+main {
+    /* Container principal */
+}
+
+section {
+    /* Seções gerais */
+}
+
+/* ========================================
+   HOME PAGE
+   ======================================== */
+.hero {
+    /* Banner principal */
+}
+
+.destaques {
+    /* Seção de destaques */
+}
+
+.cards-container {
+    /* Container de cards */
+}
+
+.categorias {
+    /* Categorias */
+}
+
+.categorias-grid {
+    /* Grid de categorias */
+}
+
+/* ========================================
+   PÁGINA DE CURSOS
+   ======================================== */
+.page-header {
+    /* Cabeçalho da página */
+}
+
+.filtros {
+    /* Filtros de busca */
+}
+
+.busca {
+    /* Campo de busca */
+}
+
+.filtros-categorias {
+    /* Filtros de categoria */
+}
+
+.lista-cursos {
+    /* Lista de cursos */
+}
+
+.cursos-grid {
+    /* Grid de cursos */
+}
+
+.paginacao {
+    /* Paginação */
+}
+
+/* ========================================
+   PÁGINA DE AULA
+   ======================================== */
+.aula-container {
+    /* Container da aula */
+}
+
+.video-player {
+    /* Player de vídeo */
+}
+
+.player-placeholder {
+    /* Placeholder do player */
+}
+
+.aula-info {
+    /* Informações da aula */
+}
+
+.aula-titulo {
+    /* Título da aula */
+}
+
+.aula-meta {
+    /* Metadados da aula */
+}
+
+.aula-descricao {
+    /* Descrição da aula */
+}
+
+.aula-recursos {
+    /* Recursos da aula */
+}
+
+.sidebar {
+    /* Barra lateral */
+}
+
+.modulos-aulas {
+    /* Módulos e aulas */
+}
+
+.lista-modulos {
+    /* Lista de módulos */
+}
+
+.progresso {
+    /* Barra de progresso */
+}
+
+.comentarios {
+    /* Comentários */
+}
+
+.comentarios-lista {
+    /* Lista de comentários */
+}
+
+/* ========================================
+   PÁGINA DE PERFIL
+   ======================================== */
+.perfil-header {
+    /* Cabeçalho do perfil */
+}
+
+.foto-perfil {
+    /* Foto de perfil */
+}
+
+.info-basica {
+    /* Informações básicas */
+}
+
+.acoes-perfil {
+    /* Ações do perfil */
+}
+
+.tabs-perfil {
+    /* Tabs do perfil */
+}
+
+.tabs-navigation {
+    /* Navegação das tabs */
+}
+
+.tab-content {
+    /* Conteúdo das tabs */
+}
+
+.tab-meus-cursos,
+.tab-certificados,
+.tab-configuracoes {
+    /* Tabs individuais */
+}
+
+.cursos-em-andamento {
+    /* Cursos em andamento */
+}
+
+.certificados-lista {
+    /* Lista de certificados */
+}
+
+.formulario-config {
+    /* Formulário de configurações */
+}
+
+.estatisticas {
+    /* Estatísticas */
+}
+
+.stats-grid {
+    /* Grid de estatísticas */
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+footer {
+    /* Footer */
+}
+
+.footer-content {
+    /* Conteúdo do footer */
+}
+
+.footer-bottom {
+    /* Parte inferior do footer */
+}
+
+/* ========================================
+   CLASSES UTILITÁRIAS
+   ======================================== */
+.container {
+    /* Container padrão */
+}
+
+.btn {
+    /* Botão padrão */
+}
+
+.btn-primary {
+    /* Botão primário */
+}
+
+.btn-secondary {
+    /* Botão secundário */
+}
+
+.card {
+    /* Card padrão */
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+    /* Estilos para tablet */
+}
+
+@media (max-width: 480px) {
+    /* Estilos para mobile */
+}
