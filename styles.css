@@ -399,15 +399,48 @@ main {
    FOOTER
    ======================================== */
 footer {
-    /* Footer */
+    background-color: #2a0a1a;
+    color: #e0e0e0;
+    padding: 2rem 0 0;
+    margin-top: 3rem;
 }
 
 .footer-content {
-    /* Conteúdo do footer */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-content li {
+    list-style: none;
+}
+
+.footer-content a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+    display: block;
+}
+
+.footer-content a:hover {
+    color: #ff6b9d;
 }
 
 .footer-bottom {
-    /* Parte inferior do footer */
+    background-color: #1a0a10;
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #3a0a2a;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #b0b0b0;
 }
 
 /* ========================================
