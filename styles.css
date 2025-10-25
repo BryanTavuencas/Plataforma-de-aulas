@@ -21,6 +21,7 @@
 /* ========================================
    RESET E ESTILOS GLOBAIS
    ======================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -29,10 +30,11 @@
 
 body {
     font-family: var(--fonte-principal);
-    font-size: var(--fonte-tamanho-base);
-    color: var(--cor-texto);
-    background-color: var(--cor-fundo);
+    background-color: #0a0f1c; /* Azul muito escuro, quase preto */
+    color: #e0e0e0;
     line-height: 1.6;
+    min-height: 100vh;
+}e-height: 1.6;
 }
 
 /* ========================================
