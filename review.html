@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Aulas - Fale Conosco</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER E NAVEGAÇÃO -->
+ <header>
+        <nav>
+            <div class="logo">
+                <!-- Logo aqui -->
+                 <img id="logoSite" src="Assets/images/Logo_CodeClas.png" alt="Logo da CodeCLass">
+            </div>
+            <li class="nav-menu">
+                <ul><a href="index.html">Home</a></ul>
+                <ul><a href="cursos.html">Cursos</a></ul>
+                <ul><a href="aula.html">Aula</a></ul>
+                <ul><a href="perfil.html">Perfil</a></ul>
+                <ul><a href="review.html">Fale Conosco</a></ul>
+            </li>
+            <div class="user-actions">
+                <!-- Botões de login/logout-->
+                <!-- TODO: Colocar a funcionalidade do botão -->
+                 <button id="BotaoLogin" type="button">Login</button>
+            </div>
+        </nav>
+    </header>
+
+     <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <section class="review-formulario">
+            <!--Titulo Formulario-->
+                <h2>CodeClass - Fale Conosco</h2>
+            <div class="review-title">
+                <p>Fale conosco e compartilhe sua experiência utilizando o CodeClass!!</p>
+            </div>
+            <!-- PERGUNTAS -->
+            <div class="review-question">
+                <label for="review-nome"><strong>Nome:</strong></label>
+                <input type="text" id="review-nome" name="usuario">
+            </div>
+
+            <div class="review-question">
+                <label for="review-email"><strong>Email:</strong></label>
+                <input type="text" id="review-email" name="email">
+            </div>
+
+            <div class="review-question">
+                <p><strong>Como você avalia nossa plataforma?</strong></p>
+                <input type="radio" id="satisfacao-excelente" name="satisfacao" value="excelente">
+                <label for="satisfacao-excelente">Excelente</label>
+                <br>
+                <input type="radio" id="satisfacao-otimo" name="satisfacao" value="otimo">
+                <label for="satisfacao-otimo">Ótimo</label>
+                <br>
+                <input type="radio" id="satisfacao-ok" name="satisfacao" value="ok">
+                <label for="satisfacao-ok">Ok</label>
+                <br>
+                <input type="radio" id="satisfacao-ruim" name="satisfacao" value="ruim">
+                <label for="satisfacao-ruim">Ruim</label>
+                <br>
+                <input type="radio" id="satisfacao-pessima" name="satisfacao" value="pessima">
+                <label for="satisfacao-pessima">Péssima</label>
+            </div>
+
+            <div class="review-question">
+                <label for="review-sugestoes"><strong>Sugestões de novos cursos:</strong></label>
+                <input type="text" id="review-sugestoes" name="sugestoes">
+            </div>
+
+             <div class="review-experiencia">
+                <label for="review-experiencia"><strong>Sua experiencia:</strong></label>
+                <input type="text" id="review-experiencia" name="experiencia">
+            </div>
+            
+
+        </section>
+    </main>
+ <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <!-- Links e informações -->
+             <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="aula.html">Aula</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="review.html">Fale Conosco</a></li>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CodeClass. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="functions.js"></script>
+</body>
+</html>
