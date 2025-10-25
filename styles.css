@@ -252,7 +252,26 @@ main {
    PÁGINA DE CURSOS
    ======================================== */
 .page-header {
-    /* Cabeçalho da página */
+    text-align: center;
+    padding: 3rem 0 2rem;
+    background: linear-gradient(135deg, #2a0a1a 0%, #1a0a10 100%);
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #8b0000;
+}
+
+.page-header h1 {
+    color: #8b0000;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.page-header p {
+    color: #b0b0b0;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 .filtros {
