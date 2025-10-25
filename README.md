@@ -105,10 +105,10 @@ Contém estrutura organizada com:
 - [ ] Gerenciar estado da aplicação com localStorage
 
 ### HTML
-- [ ] Adicionar conteúdo real nas páginas
-- [ ] Criar estrutura de cards de cursos
-- [ ] Implementar formulários
-- [ ] Adicionar elementos de mídia
+- [X] Adicionar conteúdo real nas páginas
+- [X] Criar estrutura de cards de cursos
+- [X] Implementar formulários
+- [X] Adicionar elementos de mídia
 
 ### Assets
 - [ ] Adicionar logo da plataforma
