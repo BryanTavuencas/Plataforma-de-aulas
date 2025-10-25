@@ -210,11 +210,42 @@ main {
 }
 
 .categorias {
-    /* Categorias */
+    margin-bottom: 3rem;
+}
+
+.categorias h2 {
+    color: #8b0000;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .categorias-grid {
-    /* Grid de categorias */
+    background-color: #1a1a2e;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.categorias-grid li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.categorias-grid ul {
+    background-color: #2a0a1a;
+    padding: 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.categorias-grid ul:hover {
+    background-color: #3a0a2a;
+    transform: scale(1.05);
 }
 
 /* ========================================
