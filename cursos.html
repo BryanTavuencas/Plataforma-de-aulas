@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plataforma de Aulas - Cursos</title>
+    <title>CodeClass - Cursos</title>
+    <link rel="icon" href="Assets/images/Logo_CodeClas.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,37 +15,14 @@
                 <!-- Logo aqui -->
                  <img id="logoSite" src="Assets/images/Logo_CodeClas.png" alt="Logo da CodeCLass">
             </div>
-            <li class="nav-menu">
-                <ul><a href="index.html">Home</a></ul>
-                <ul><a href="cursos.html">Cursos</a></ul>
-                <ul><a href="aula.html">Aula</a></ul>
-                <ul><a href="perfil.html">Perfil</a></ul>
-                <ul><a href="review.html">Fale Conosco</a></ul>
-            </li>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="aula.html">Aula</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+            </ul>
             <div class="user-actions">
-                <!-- Botões de login/logout-->
-                <!-- TODO: Colocar a funcionalidade do botão -->
-                 <button class="BotaoLogin" type="button">Login</button>
-                 <form action="#" method="post">
-        
-                    <fieldset>
-                        <legend>Login</legend>
-                        <div>
-                        <label for="usuario">Usuário:</label>
-                            <input type="text" id="usuario" name="nome_usuario" placeholder="Digite seu usuário">
-                        </div>
-
-                        <div>
-                            <label for="senha">Senha:</label>
-                            <input type="password" id="senha" name="senha_usuario" placeholder="Digite sua senha">
-                        </div>
-
-                        <div>
-                            <button type="submit">Entrar</button>
-                        </div>
-
-                    </fieldset>
-                </form>
+                <!-- Botões de login/logout -->
             </div>
         </nav>
     </header>
@@ -53,30 +31,16 @@
     <main>
         <section class="page-header">
             <h1>Cursos Disponíveis</h1>
-            <p>Esses são nossos cursos que você pode começar agora e gratuitamente quando quiser!!</p>
+            <p><!-- Descrição da página --></p>
         </section>
 
         <section class="filtros">
             <!-- Filtros de busca e categorias -->
             <div class="busca">
                 <!-- Campo de busca -->
-                 <label for="busca-cursos"><strong>Busca:</strong></label>
-                <input type="text" id="busca-cursos" name="busca">
             </div>
             <div class="filtros-categorias">
                 <!-- Filtros por categoria, nível, etc -->
-                 <p><strong>Filtros por Nivel</strong></p>
-                <input type="radio" id="nivel-basico" name="nivel" value="basico">
-                <label for="nivel-basico">Básico</label>
-                <br>
-                <input type="radio" id="snivel-medio" name="nivel" value="medio">
-                <label for="nivel-medio">Médio</label>
-                <br>
-                <input type="radio" id="nivel-avancado" name="nivel" value="avancado">
-                <label for="nivel-avancado">Avançado</label>
-            </div>
-            <div>
-             <button id="btnBuscar" type="button">Buscar</button>
             </div>
         </section>
 
@@ -84,8 +48,6 @@
             <!-- Lista/Grid de cursos -->
             <div class="cursos-grid">
                 <!-- Cards de cursos serão inseridos aqui -->
-                 <h3>Curso básico de linguagem C</h3>
-                 <P>Curso básico para aprender Lógica de programação e o básico de linguagem C. </P>
             </div>
         </section>
 
@@ -94,21 +56,16 @@
         </section>
     </main>
 
-  
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
             <!-- Links e informações -->
-             <li><a href="index.html">Home</a></li>
-                <li><a href="cursos.html">Cursos</a></li>
-                <li><a href="aula.html">Aula</a></li>
-                <li><a href="perfil.html">Perfil</a></li>
-                <li><a href="review.html">Fale Conosco</a></li>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 CodeClass. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Plataforma de Aulas. Todos os direitos reservados.</p>
         </div>
     </footer>
+
     <script src="functions.js"></script>
 </body>
 </html>
