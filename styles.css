@@ -448,7 +448,50 @@ main {
 }
 
 .paginacao {
-    /* Paginação */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.pagina-btn {
+    background-color: #2a0a1a;
+    color: #e0e0e0;
+    border: 2px solid #2a0a1a;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    min-width: 40px;
+    text-align: center;
+}
+
+.pagina-btn:hover {
+    background-color: #3a0a2a;
+    border-color: #8b0000;
+}
+
+.pagina-btn.ativo {
+    background-color: #8b0000;
+    border-color: #8b0000;
+    color: white;
+}
+
+.pagina-btn.setas {
+    background-color: #1a1a2e;
+    font-weight: bold;
+}
+
+.pagina-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagina-btn:disabled:hover {
+    background-color: #2a0a1a;
+    border-color: #2a0a1a;
 }
 
 /* ========================================
