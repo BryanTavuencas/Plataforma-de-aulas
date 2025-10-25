@@ -24,7 +24,27 @@
             <div class="user-actions">
                 <!-- Botões de login/logout-->
                 <!-- TODO: Colocar a funcionalidade do botão -->
-                 <button id="BotaoLogin" type="button">Login</button>
+                 <button class="BotaoLogin" type="button">Login</button>
+                 <form action="#" method="post">
+        
+                    <fieldset>
+                        <legend>Login</legend>
+                        <div>
+                        <label for="usuario">Usuário:</label>
+                            <input type="text" id="usuario" name="nome_usuario" placeholder="Digite seu usuário">
+                        </div>
+
+                        <div>
+                            <label for="senha">Senha:</label>
+                            <input type="password" id="senha" name="senha_usuario" placeholder="Digite sua senha">
+                        </div>
+
+                        <div>
+                            <button type="submit">Entrar</button>
+                        </div>
+
+                    </fieldset>
+                </form>
             </div>
         </nav>
     </header>

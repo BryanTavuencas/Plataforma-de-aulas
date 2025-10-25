@@ -24,7 +24,27 @@
             <div class="user-actions">
                 <!-- Botões de login/logout-->
                 <!-- TODO: Colocar a funcionalidade do botão -->
-                 <button id="BotaoLogin" type="button">Login</button>
+                 <button class="BotaoLogin" type="button">Login</button>
+                 <form action="#" method="post">
+        
+                    <fieldset>
+                        <legend>Login</legend>
+                        <div>
+                        <label for="usuario">Usuário:</label>
+                            <input type="text" id="usuario" name="nome_usuario" placeholder="Digite seu usuário">
+                        </div>
+
+                        <div>
+                            <label for="senha">Senha:</label>
+                            <input type="password" id="senha" name="senha_usuario" placeholder="Digite sua senha">
+                        </div>
+
+                        <div>
+                            <button type="submit">Entrar</button>
+                        </div>
+
+                    </fieldset>
+                </form>
             </div>
         </nav>
     </header>
@@ -34,18 +54,19 @@
         <section class="perfil-header">
             <div class="foto-perfil">
                 <!-- Foto do usuário -->
+                 <img src="Assets/icons/perfil.png" alt="Foto de perfil do usuário">
             </div>
             <div class="info-basica">
-                <h1><!-- Nome do usuário --></h1>
-                <p><!-- Descrição/bio --></p>
+                <h1 id="username">usuário</h1>
+                <p id="usuario"><strong>Biografia</strong><br>
+                    Sou um usuário</p>
             </div>
-            <div class="acoes-perfil">
-                <!-- Botão editar perfil -->
-            </div>
+           
         </section>
 
         <section class="tabs-perfil">
             <!-- Tabs: Meus Cursos, Certificados, Configurações -->
+
             <div class="tabs-navigation">
                 <!-- Navegação das tabs -->
             </div>
@@ -56,6 +77,11 @@
                     <h2>Meus Cursos</h2>
                     <div class="cursos-em-andamento">
                         <!-- Lista de cursos -->
+                         <li>
+                            <ul>
+                                <a href ="cursos.html" id="cursoC">Curso de linguagem C: </a><strong> O%</strong>
+                            </ul>
+                         </li>
                     </div>
                 </div>
 
@@ -64,6 +90,10 @@
                     <h2>Certificados</h2>
                     <div class="certificados-lista">
                         <!-- Grid de certificados -->
+                         <li>
+                            <ul><a href = "cursos.html" id="cursoC">Curso de linguagem C: </a> <br> 
+                                <img src="Assets/images/Certificado.jpg" alt="Certificado do curso dw linguagem C"></ul>
+                         </li>
                     </div>
                 </div>
 
@@ -72,6 +102,18 @@
                     <h2>Configurações</h2>
                     <div class="formulario-config">
                         <!-- Formulário de configurações -->
+                        <div class="acoes-perfil">
+                            <!-- Botão editar perfil -->
+                            <button id="btnEditarPerfil" type="button">Alterar</button>
+                        </div>
+                        <div class="acoes-mudarModo">
+                            <!-- Botão editar perfil -->
+                            <button id="btnModoEscuro" type="button">DarkMode</button>
+                        </div>
+                        <div class="acoes-deletar">
+                            <!-- Botão editar perfil -->
+                            <button id="btnDeletarPerfil" type="button">Deletar Conta</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -82,6 +124,8 @@
             <h2>Estatísticas</h2>
             <div class="stats-grid">
                 <!-- Cards com estatísticas -->
+                 <h3>Curso de linguagem C</h3>
+                 <P><strong>0%</strong></P>
             </div>
         </section>
     </main>
