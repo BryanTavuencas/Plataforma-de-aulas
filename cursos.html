@@ -53,16 +53,30 @@
     <main>
         <section class="page-header">
             <h1>Cursos Disponíveis</h1>
-            <p><!-- Descrição da página --></p>
+            <p>Esses são nossos cursos que você pode começar agora e gratuitamente quando quiser!!</p>
         </section>
 
         <section class="filtros">
             <!-- Filtros de busca e categorias -->
             <div class="busca">
                 <!-- Campo de busca -->
+                 <label for="busca-cursos"><strong>Busca:</strong></label>
+                <input type="text" id="busca-cursos" name="busca">
             </div>
             <div class="filtros-categorias">
                 <!-- Filtros por categoria, nível, etc -->
+                 <p><strong>Filtros por Nivel</strong></p>
+                <input type="radio" id="nivel-basico" name="nivel" value="basico">
+                <label for="nivel-basico">Básico</label>
+                <br>
+                <input type="radio" id="snivel-medio" name="nivel" value="medio">
+                <label for="nivel-medio">Médio</label>
+                <br>
+                <input type="radio" id="nivel-avancado" name="nivel" value="avancado">
+                <label for="nivel-avancado">Avançado</label>
+            </div>
+            <div>
+             <button id="btnBuscar" type="button">Buscar</button>
             </div>
         </section>
 
@@ -70,6 +84,8 @@
             <!-- Lista/Grid de cursos -->
             <div class="cursos-grid">
                 <!-- Cards de cursos serão inseridos aqui -->
+                 <h3>Curso básico de linguagem C</h3>
+                 <P>Curso básico para aprender Lógica de programação e o básico de linguagem C. </P>
             </div>
         </section>
 
@@ -78,7 +94,7 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
+  
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
