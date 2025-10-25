@@ -275,15 +275,66 @@ main {
 }
 
 .filtros {
-    /* Filtros de busca */
+    background-color: #1a1a2e;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .busca {
-    /* Campo de busca */
+    margin-bottom: 1.5rem;
+}
+
+.busca input {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.75rem 1rem;
+    border: 2px solid #2a0a1a;
+    border-radius: 25px;
+    background-color: #0a0f1c;
+    color: #e0e0e0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.busca input:focus {
+    outline: none;
+    border-color: #8b0000;
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.3);
+}
+
+.busca input::placeholder {
+    color: #666;
 }
 
 .filtros-categorias {
-    /* Filtros de categoria */
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filtro-btn {
+    background-color: #2a0a1a;
+    color: #e0e0e0;
+    border: 2px solid #2a0a1a;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filtro-btn:hover {
+    background-color: #3a0a2a;
+    border-color: #8b0000;
+}
+
+.filtro-btn.ativo {
+    background-color: #8b0000;
+    border-color: #8b0000;
+    color: white;
 }
 
 .lista-cursos {
