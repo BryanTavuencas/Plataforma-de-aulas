@@ -650,6 +650,82 @@ main {
     font-size: 1.2rem;
 }
 
+.aula-questionario {
+    background-color: rgba(26, 26, 46, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #2a0a1a;
+    margin-top: 1.5rem;
+}
+
+.aula-questionario p {
+    color: #8b0000;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.aula-questionario label {
+    color: #e0e0e0;
+    margin-left: 0.5rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.aula-questionario input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #2a0a1a;
+    border-radius: 50%;
+    background-color: #0a0f1c;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.aula-questionario input[type="radio"]:checked {
+    border-color: #8b0000;
+    background-color: #8b0000;
+}
+
+.aula-questionario input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.aula-questionario input[type="radio"]:hover {
+    border-color: #ff6b9d;
+}
+
+.btnRespomder {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    display: block;
+}
+
+.btnRespomder:hover {
+    background-color: #a00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.4);
+}
+
 /* ========================================
    PÁGINA DE PERFIL
    ======================================== */
