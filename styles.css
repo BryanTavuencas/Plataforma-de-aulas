@@ -1018,23 +1018,31 @@ footer {
     padding: 0 2rem;
     display: flex;
     justify-content: center;
-    gap: 3rem;
     margin-bottom: 2rem;
 }
 
-.footer-content li {
+.footer-links {
+    display: flex;
+    gap: 3rem;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.footer-content a {
+.footer-links li {
+    margin: 0;
+}
+
+.footer-links a {
     color: #e0e0e0;
     text-decoration: none;
     transition: color 0.3s ease;
     padding: 0.5rem;
     display: block;
+    font-weight: 500;
 }
 
-.footer-content a:hover {
+.footer-links a:hover {
     color: #ff6b9d;
 }
 
