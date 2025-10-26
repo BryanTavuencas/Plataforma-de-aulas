@@ -604,6 +604,52 @@ main {
     color: #ff6b9d;
 }
 
+.aula-descricao {
+    background-color: rgba(26, 26, 46, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #2a0a1a;
+}
+
+.aula-descricao p {
+    color: #e0e0e0;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.aula-recursos {
+    background-color: rgba(42, 10, 26, 0.6);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 2px dashed #8b0000;
+}
+
+.aula-recursos a {
+    color: #ff6b9d;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    background-color: rgba(139, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.aula-recursos a:hover {
+    background-color: #8b0000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.aula-recursos::before {
+    content: "📎";
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
 /* ========================================
    PÁGINA DE PERFIL
    ======================================== */
