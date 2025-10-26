@@ -145,14 +145,13 @@ nav {
    LAYOUT PRINCIPAL
    ======================================== */
 main {
-    display: grid;
-    grid-template-columns: 1fr 320px; /* LARGURA FIXA PARA SIDEBAR */
-    gap: 2rem;
-    max-width: 1400px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 200px);
     padding: 2rem;
-    align-items: start;
 }
+
 
 .hero {
     text-align: center;
@@ -1296,27 +1295,201 @@ footer {
 }
 
 /* ========================================
-   CLASSES UTILITÁRIAS
+   FALE CONOSCO
    ======================================== */
-.container {
-    /* Container padrão */
+
+.review-formulario {
+    background: linear-gradient(145deg, #1a1a2e 0%, #2a0a1a 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2a0a1a;
+    margin: 0 auto;
 }
 
-.btn {
-    /* Botão padrão */
+.review-formulario h2 {
+    color: #8b0000;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.btn-primary {
-    /* Botão primário */
+.review-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #2a0a1a;
 }
 
-.btn-secondary {
-    /* Botão secundário */
+.review-title p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
-.card {
-    /* Card padrão */
+/* Campos do formulário */
+.review-question,
+.review-experiencia {
+    background-color: rgba(26, 26, 46, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #2a0a1a;
+    transition: all 0.3s ease;
 }
+
+.review-question:hover,
+.review-experiencia:hover {
+    border-color: #8b0000;
+    transform: translateY(-2px);
+}
+
+.review-question label,
+.review-experiencia label {
+    color: #e0e0e0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+.review-question strong,
+.review-experiencia strong {
+    color: #ff6b9d;
+}
+
+.review-question input[type="text"],
+.review-experiencia input[type="text"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #2a0a1a;
+    border-radius: 6px;
+    background-color: #0a0f1c;
+    color: #e0e0e0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.review-question input[type="text"]:focus,
+.review-experiencia input[type="text"]:focus {
+    outline: none;
+    border-color: #8b0000;
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.3);
+}
+
+.review-question input[type="text"]::placeholder,
+.review-experiencia input[type="text"]::placeholder {
+    color: #666;
+}
+
+/* Botões de radio personalizados */
+.review-question p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.review-question p strong {
+    color: #ff6b9d;
+}
+
+.review-question input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #2a0a1a;
+    border-radius: 50%;
+    background-color: #0a0f1c;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.review-question input[type="radio"]:checked {
+    border-color: #8b0000;
+    background-color: #8b0000;
+}
+
+.review-question input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.review-question input[type="radio"]:hover {
+    border-color: #ff6b9d;
+}
+
+.review-question label[for^="satisfacao"] {
+    color: #e0e0e0;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 1rem;
+    margin-right: 1.5rem;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+}
+
+.review-question label[for^="satisfacao"]:hover {
+    color: #ff6b9d;
+}
+
+.review-question br {
+    margin-bottom: 0.5rem;
+    display: block;
+    content: "";
+}
+
+/* Botão de envio */
+.review-submit {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #2a0a1a;
+}
+
+#btnEnviarReview {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    min-width: 200px;
+}
+
+#btnEnviarReview:hover {
+    background-color: #a00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.4);
+}
+
+/* Estados de foco para acessibilidade */
+.review-question input[type="text"]:focus,
+.review-experiencia input[type="text"]:focus,
+.review-question input[type="radio"]:focus,
+#btnEnviarReview:focus {
+    outline: 3px solid #ff6b9d;
+    outline-offset: 2px;
+}
+
 
 /* ========================================
    RESPONSIVE
