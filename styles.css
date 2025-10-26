@@ -14,7 +14,6 @@ body {
     color: #e0e0e0;
     line-height: 1.6;
     min-height: 100vh;
-}e-height: 1.6;
 }
 
 /* ========================================
@@ -948,60 +947,298 @@ main {
 /* ========================================
    PÁGINA DE PERFIL
    ======================================== */
+/* Header do Perfil */
 .perfil-header {
-    /* Cabeçalho do perfil */
+    background: linear-gradient(135deg, #2a0a1a 0%, #1a0a10 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2a0a1a;
 }
 
 .foto-perfil {
-    /* Foto de perfil */
+    flex-shrink: 0;
+}
+
+.foto-perfil img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #8b0000;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .info-basica {
-    /* Informações básicas */
+    flex: 1;
 }
 
-.acoes-perfil {
-    /* Ações do perfil */
+.info-basica h1 {
+    color: #8b0000;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+.info-basica p {
+    color: #e0e0e0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.info-basica strong {
+    color: #ff6b9d;
+}
+
+/* Sistema de Tabs */
 .tabs-perfil {
-    /* Tabs do perfil */
+    background: linear-gradient(145deg, #1a1a2e 0%, #2a0a1a 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2a0a1a;
 }
 
 .tabs-navigation {
-    /* Navegação das tabs */
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #2a0a1a;
+    padding-bottom: 1rem;
+}
+
+.tab-btn {
+    background-color: transparent;
+    color: #e0e0e0;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.tab-btn:hover {
+    background-color: rgba(139, 0, 0, 0.2);
+    color: #ff6b9d;
+}
+
+.tab-btn.ativo {
+    background-color: #8b0000;
+    color: white;
 }
 
 .tab-content {
-    /* Conteúdo das tabs */
+    min-height: 300px;
 }
 
+/* Esconder todas as tabs por padrão */
 .tab-meus-cursos,
 .tab-certificados,
 .tab-configuracoes {
-    /* Tabs individuais */
+    display: none;
 }
 
+/* Mostrar apenas a tab ativa */
+.tab-meus-cursos.ativo,
+.tab-certificados.ativo,
+.tab-configuracoes.ativo {
+    display: block;
+}
+
+.tab-meus-cursos h2,
+.tab-certificados h2,
+.tab-configuracoes h2 {
+    color: #8b0000;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Tab Meus Cursos */
 .cursos-em-andamento {
-    /* Cursos em andamento */
+    background-color: rgba(26, 26, 46, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #2a0a1a;
 }
 
+.cursos-em-andamento ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cursos-em-andamento li {
+    background-color: rgba(42, 10, 26, 0.6);
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #8b0000;
+    transition: transform 0.3s ease;
+}
+
+.cursos-em-andamento li:hover {
+    transform: translateX(5px);
+}
+
+.cursos-em-andamento a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.cursos-em-andamento a:hover {
+    color: #ff6b9d;
+}
+
+.cursos-em-andamento strong {
+    color: #ff6b9d;
+    margin-left: 1rem;
+}
+
+/* Tab Certificados */
 .certificados-lista {
-    /* Lista de certificados */
+    background-color: rgba(26, 26, 46, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #2a0a1a;
 }
 
+.certificados-lista ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.certificados-lista li {
+    background-color: rgba(42, 10, 26, 0.6);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px dashed #8b0000;
+    transition: all 0.3s ease;
+}
+
+.certificados-lista li:hover {
+    border-style: solid;
+    transform: translateY(-5px);
+}
+
+.certificados-lista a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.certificados-lista img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #2a0a1a;
+    transition: transform 0.3s ease;
+}
+
+.certificados-lista img:hover {
+    transform: scale(1.05);
+}
+
+/* Tab Configurações */
 .formulario-config {
-    /* Formulário de configurações */
+    background-color: rgba(26, 26, 46, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #2a0a1a;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
+.acoes-perfil,
+.acoes-mudarModo,
+.acoes-deletar {
+    display: flex;
+    justify-content: center;
+}
+
+#btnEditarPerfil,
+#btnModoEscuro,
+#btnDeletarPerfil {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+#btnEditarPerfil:hover,
+#btnModoEscuro:hover {
+    background-color: #a00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.4);
+}
+
+#btnDeletarPerfil {
+    background-color: #dc2626;
+}
+
+#btnDeletarPerfil:hover {
+    background-color: #ef4444;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}
+
+/* Estatísticas */
 .estatisticas {
-    /* Estatísticas */
+    background: linear-gradient(145deg, #1a1a2e 0%, #2a0a1a 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2a0a1a;
+}
+
+.estatisticas h2 {
+    color: #8b0000;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .stats-grid {
-    /* Grid de estatísticas */
+    background-color: rgba(26, 26, 46, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #2a0a1a;
+    text-align: center;
 }
 
+.stats-grid h3 {
+    color: #e0e0e0;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.stats-grid p {
+    color: #ff6b9d;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
 /* ========================================
    FOOTER
    ======================================== */
@@ -1090,4 +1327,111 @@ footer {
 
 @media (max-width: 480px) {
     /* Estilos para mobile */
+}
+
+/* Ajustes específicos para a página de perfil
+   - torna o main em uma coluna quando contém .perfil-header / .tabs-perfil
+   - melhora espaçamentos, quebra de linha e tamanhos para telas menores
+   Nota: usa :has() (Chrome/Edge/Firefox modernos). Se o navegador não suportar, use a alternativa comentada abaixo. */
+main:has(.tabs-perfil),
+main:has(.perfil-header),
+main:has(.estatisticas) {
+    display: block;
+    max-width: 980px;
+    margin: 2rem auto;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+/* Alternativa caso queira compatibilidade ampla (adicionar class="perfil-main" no <main> do perfil):
+   .perfil-main { display: block; max-width: 980px; margin: 2rem auto; padding: 2rem; gap: 1.5rem; } */
+
+/* Perfil header mais compacto e responsivo */
+.perfil-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+}
+
+.foto-perfil {
+    flex: 0 0 auto;
+}
+
+.info-basica {
+    flex: 1 1 280px;
+    min-width: 0; /* evita overflow de texto */
+}
+
+/* Tabs e conteúdo ocupando toda a largura e com bom espaçamento */
+.tabs-perfil {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.tabs-navigation {
+    flex-wrap: wrap;
+    gap: .5rem .75rem;
+}
+
+.tab-content {
+    min-height: auto;
+    margin-top: 1rem;
+}
+
+/* Garante que listas dentro das tabs fiquem legíveis */
+.cursos-em-andamento,
+.certificados-lista,
+.formulario-config,
+.stats-grid {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Corrige estrutura de listas (HTML está com li/ul trocados em alguns pontos) */
+.cursos-em-andamento li,
+.certificados-lista li {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botões de ação da aba Configurações mais alinhados em telas pequenas */
+.formulario-config {
+    align-items: center;
+}
+
+.acoes-perfil,
+.acoes-mudarModo,
+.acoes-deletar {
+    width: 100%;
+}
+
+/* Ajustes visuais para evitar textos cortados */
+.cursos-em-andamento a,
+.certificados-lista a {
+    word-break: break-word;
+    display: inline-block;
+}
+
+/* Estatísticas centralizadas e proporcionais */
+.estatisticas {
+    margin-top: 1.5rem;
+}
+
+/* Pequenas melhorias responsivas */
+@media (max-width: 800px) {
+    .perfil-header { padding: 1rem; gap: 1rem; }
+    .foto-perfil img { width: 100px; height: 100px; }
+    #btnEditarPerfil, #btnModoEscuro, #btnDeletarPerfil { min-width: 160px; padding: 0.6rem 1rem; }
+    main:has(.tabs-perfil),
+    main:has(.perfil-header) { padding: 1rem; margin: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .perfil-header { flex-direction: column; align-items: flex-start; }
+    .info-basica h1 { font-size: 1.6rem; }
+    .tabs-navigation { width: 100%; }
+    .tab-btn { padding: 0.5rem 0.9rem; font-size: 0.95rem; }
 }

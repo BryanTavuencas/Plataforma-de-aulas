@@ -1,69 +1,156 @@
-<main>
-    <section class="perfil-header">
-        <div class="foto-perfil">
-            <img src="Assets/icons/perfil.png" alt="Foto de perfil do usuário">
-        </div>
-        <div class="info-basica">
-            <h1 id="username">usuário</h1>
-            <p id="usuario"><strong>Biografia</strong><br>
-                Sou um usuário</p>
-        </div>
-    </section>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeClass - Perfil</title>
+    <link rel="icon" href="Assets/images/Logo_CodeClas.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER E NAVEGAÇÃO -->
+    <header>
+        <nav>
+            <div class="logo">
+                <!-- Logo aqui -->
+                 <img id="logoSite" src="Assets/images/Logo_CodeClas.png" alt="Logo da CodeCLass">
+            </div>
+            <li class="nav-menu">
+                <ul><a href="index.html">Home</a></ul>
+                <ul><a href="cursos.html">Cursos</a></ul>
+                <ul><a href="aula.html">Aula</a></ul>
+                <ul><a href="perfil.html">Perfil</a></ul>
+                <ul><a href="review.html">Fale Conosco</a></ul>
+            </li>
+            <div class="user-actions">
+                <!-- Botões de login/logout-->
+                <!-- TODO: Colocar a funcionalidade do botão -->
+                 <button class="BotaoLogin" type="button">Login</button>
+                 <form action="#" method="post">
 
-    <section class="tabs-perfil">
-        <div class="tabs-navigation">
-            <button class="tab-btn ativo" data-tab="meus-cursos">Meus Cursos</button>
-            <button class="tab-btn" data-tab="certificados">Certificados</button>
-            <button class="tab-btn" data-tab="configuracoes">Configurações</button>
-        </div>
+                    <fieldset>
+                        <legend>Login</legend>
+                        <div>
+                        <label for="usuario">Usuário:</label>
+                            <input type="text" id="usuario" name="nome_usuario" placeholder="Digite seu usuário">
+                        </div>
 
-        <div class="tab-content">
-            <div class="tab-meus-cursos ativo">
-                <h2>Meus Cursos</h2>
-                <div class="cursos-em-andamento">
-                    <ul>
-                        <li>
-                            <a href="cursos.html" id="cursoC">Curso de linguagem C</a>
-                            <strong>0%</strong>
-                        </li>
-                    </ul>
-                </div>
+                        <div>
+                            <label for="senha">Senha:</label>
+                            <input type="password" id="senha" name="senha_usuario" placeholder="Digite sua senha">
+                        </div>
+
+                        <div>
+                            <button type="submit">Entrar</button>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <section class="perfil-header">
+            <div class="foto-perfil">
+                <!-- Foto do usuário -->
+                 <img src="Assets/icons/perfil.png" alt="Foto de perfil do usuário">
+            </div>
+            <div class="info-basica">
+                <h1 id="username">usuário</h1>
+                <p id="bio"><strong>Biografia</strong><br>
+                    Sou um usuário</p>
             </div>
 
-            <div class="tab-certificados">
-                <h2>Certificados</h2>
-                <div class="certificados-lista">
-                    <ul>
-                        <li>
-                            <a href="cursos.html" id="cursoC">Curso de linguagem C</a>
-                            <img src="Assets/images/Certificado.jpg" alt="Certificado do curso de linguagem C">
-                        </li>
-                    </ul>
-                </div>
+        </section>
+
+        <section class="tabs-perfil">
+            <!-- Tabs: Meus Cursos, Certificados, Configurações -->
+
+            <div class="tabs-navigation">
+                <!-- Navegação das tabs -->
+                <button class="tab-btn ativo" data-tab="meus">Meus Cursos</button>
+                <button class="tab-btn" data-tab="certificados">Certificados</button>
+                <button class="tab-btn" data-tab="configuracoes">Configurações</button>
             </div>
 
-            <div class="tab-configuracoes">
-                <h2>Configurações</h2>
-                <div class="formulario-config">
-                    <div class="acoes-perfil">
-                        <button id="btnEditarPerfil" type="button">Alterar Perfil</button>
+            <div class="tab-content">
+                <div class="tab-meus-cursos ativo">
+                    <!-- Cursos em andamento e concluídos -->
+                    <h2>Meus Cursos</h2>
+                    <div class="cursos-em-andamento">
+                        <!-- Lista de cursos -->
+                         <li>
+                            <ul>
+                                <a href ="cursos.html" id="cursoC">Curso de linguagem C: </a><strong> O%</strong>
+                            </ul>
+                         </li>
                     </div>
-                    <div class="acoes-mudarModo">
-                        <button id="btnModoEscuro" type="button">DarkMode</button>
+                </div>
+
+                <div class="tab-certificados">
+                    <!-- Certificados obtidos -->
+                    <h2>Certificados</h2>
+                    <div class="certificados-lista">
+                        <!-- Grid de certificados -->
+                         <li>
+                            <ul><a href = "cursos.html" id="cursoC">Curso de linguagem C: </a> <br> 
+                                <img src="Assets/images/Certificado.jpg" alt="Certificado do curso dw linguagem C"></ul>
+                         </li>
                     </div>
-                    <div class="acoes-deletar">
-                        <button id="btnDeletarPerfil" type="button">Deletar Conta</button>
+                </div>
+
+                <div class="tab-configuracoes">
+                    <!-- Configurações da conta -->
+                    <h2>Configurações</h2>
+                    <div class="formulario-config">
+                        <!-- Formulário de configurações -->
+                        <div class="acoes-perfil">
+                            <!-- Botão editar perfil -->
+                            <button id="btnEditarPerfil" type="button">Alterar</button>
+                        </div>
+                        <div class="acoes-mudarModo">
+                            <!-- Botão editar perfil -->
+                            <button id="btnModoEscuro" type="button">DarkMode</button>
+                        </div>
+                        <div class="acoes-deletar">
+                            <!-- Botão editar perfil -->
+                            <button id="btnDeletarPerfil" type="button">Deletar Conta</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="estatisticas">
-        <h2>Estatísticas</h2>
-        <div class="stats-grid">
-            <h3>Curso de linguagem C</h3>
-            <p><strong>0%</strong></p>
-        </div>
-    </section>
-</main>
+        <section class="estatisticas">
+            <!-- Estatísticas de aprendizado -->
+            <h2>Estatísticas</h2>
+            <div class="stats-grid">
+                <!-- Cards com estatísticas -->
+                 <h3>Curso de linguagem C</h3>
+                 <P><strong>0%</strong></P>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+   <footer>
+    <div class="footer-content">
+        <!-- Links e informações -->
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="aula.html">Aula</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="review.html">Fale Conosco</a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 CodeClass. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+    <script src="functions.js"></script>
+</body>
+</html>
