@@ -549,23 +549,21 @@ main {
     flex-shrink: 0; /* NÃO REDUZ */
 }
 
-/* Seção de comentários ocupa ambas as colunas */
 .comentarios {
     background: linear-gradient(145deg, #1a1a2e 0%, #2a0a1a 100%);
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 2rem; /* MESMO PADDING DOS CONTAINERS DE AULA */
     margin-top: 2rem;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     border: 1px solid #2a0a1a;
     grid-column: 1; /* APENAS NA PRIMEIRA COLUNA */
-    max-height: 400px;
+    max-height: 600px;
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: calc(100% - 340px); /* LARGURA REDUZIDA - NÃO SOBREPÕE SIDEBAR */
+    /* REMOVI O MAX-WIDTH - AGORA USA A MESMA LARGURA DOS CONTAINERS DE AULA */
     box-sizing: border-box;
 }
-
 .video-player {
     margin-bottom: 1.5rem;
     border-radius: 8px;
@@ -845,8 +843,8 @@ main {
 
 .comentarios h2 {
     color: #8b0000;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem; /* MESMO TAMANHO DOS TÍTULOS DAS AULAS */
+    margin-bottom: 1.5rem; /* MESMA MARGEM DOS CONTAINERS DE AULA */
     text-align: center;
     flex-shrink: 0;
 }
@@ -856,14 +854,16 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 0;
+    gap: 1rem; /* ESPAÇO ENTRE FORMULÁRIO E LISTA */
 }
+
 
 /* FORMULÁRIO MAIS COMPACTO */
 .comentarios-lista > div {
     background-color: rgba(26, 26, 46, 0.8);
-    padding: 1rem;
+    padding: 1.5rem; /* MESMO PADDING DOS CONTAINERS DE AULA */
     border-radius: 8px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; /* MESMA MARGEM DOS CONTAINERS DE AULA */
     border: 1px solid #2a0a1a;
     flex-shrink: 0;
 }
@@ -873,20 +873,21 @@ main {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 1rem; /* TEXTO MAIOR, IGUAL AOS CONTAINERS DE AULA */
 }
 
 .comentarios-lista input[type="text"] {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.75rem; /* PADDING MAIOR, IGUAL AOS FORMULÁRIOS DAS AULAS */
     border: 2px solid #2a0a1a;
     border-radius: 6px;
     background-color: #0a0f1c;
     color: #e0e0e0;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem; /* MAIS ESPAÇAMENTO */
     transition: border-color 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 1rem; /* TEXTO MAIOR */
 }
+
 
 .comentarios-lista input[type="text"]:focus {
     outline: none;
@@ -897,17 +898,18 @@ main {
     background-color: #8b0000;
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 2rem; /* PADDING MAIOR, IGUAL AOS BOTÕES DAS AULAS */
     border-radius: 6px;
     cursor: pointer;
     font-weight: 500;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 1rem; /* TEXTO MAIOR */
 }
 
 #comentar:hover {
     background-color: #a00;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.4);
 }
 
 /* LISTA DE COMENTÁRIOS COM SCROLL */
@@ -917,30 +919,32 @@ main {
     margin: 0;
     overflow-y: auto;
     flex: 1;
-    max-height: 200px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; /* ESPAÇO ENTRE COMENTÁRIOS */
 }
 
 .comentarios-lista > ul li {
     background-color: rgba(42, 10, 26, 0.6);
-    padding: 0.75rem;
+    padding: 1rem;
     border-radius: 6px;
-    margin-bottom: 0.5rem;
-    border-left: 3px solid #8b0000;
+    border-left: 4px solid #8b0000;
     transition: transform 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    min-height: auto; /* REMOVI ALTURA MÍNIMA FIXA */
 }
+
 
 .comentarios-lista > ul li:hover {
-    transform: translateX(3px);
+    transform: translateX(5px); /* MOVIMENTO MAIS PRONUNCIADO */
 }
-
 
 .comentarios-lista strong {
     color: #ff6b9d;
     margin-right: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 1rem; /* TEXTO MAIOR */
 }
-
 /* ========================================
    PÁGINA DE PERFIL
    ======================================== */
