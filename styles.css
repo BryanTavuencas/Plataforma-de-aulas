@@ -497,60 +497,53 @@ main {
 /* ========================================
    PÁGINA DE AULA
    ======================================== */
+main {
+    display: grid;
+    grid-template-columns: 1fr 300px; /* Conteúdo principal | Sidebar */
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    align-items: start;
+}
+
+/* Área principal das aulas - UMA COLUNA VERTICAL COM GAP */
+.aula-principal {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* ESPAÇO ENTRE OS CONTAINERS DAS AULAS */
+}
+
+/* Cada container de aula ocupa 100% da largura */
 .aula-container {
-    /* Container da aula */
+    background: linear-gradient(145deg, #1a1a2e 0%, #2a0a1a 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2a0a1a;
+    transition: all 0.3s ease;
+    width: 100%; /* Garante 100% de largura */
 }
 
-.video-player {
-    /* Player de vídeo */
+.aula-container:hover {
+    border-color: #8b0000;
+    box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
 }
 
-.player-placeholder {
-    /* Placeholder do player */
-}
-
-.aula-info {
-    /* Informações da aula */
-}
-
-.aula-titulo {
-    /* Título da aula */
-}
-
-.aula-meta {
-    /* Metadados da aula */
-}
-
-.aula-descricao {
-    /* Descrição da aula */
-}
-
-.aula-recursos {
-    /* Recursos da aula */
-}
-
+/* Sidebar fixa */
 .sidebar {
-    /* Barra lateral */
+    grid-column: 2;
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+    height: fit-content;
 }
 
-.modulos-aulas {
-    /* Módulos e aulas */
-}
-
-.lista-modulos {
-    /* Lista de módulos */
-}
-
-.progresso {
-    /* Barra de progresso */
-}
-
+/* Seção de comentários ocupa ambas as colunas */
 .comentarios {
-    /* Comentários */
-}
-
-.comentarios-lista {
-    /* Lista de comentários */
+    grid-column: 1 / -1; /* Ocupa da coluna 1 até a última */
+    width: 100%;
 }
 
 /* ========================================

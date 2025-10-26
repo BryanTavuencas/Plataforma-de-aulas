@@ -9,41 +9,37 @@
 </head>
 <body>
     <!-- HEADER E NAVEGAÇÃO -->
-     <header>
+    <header>
         <nav>
             <div class="logo">
                 <!-- Logo aqui -->
-                 <img id="logoSite" src="Assets/images/Logo_CodeClas.png" alt="Logo da CodeCLass">
+                <img id="logoSite" src="Assets/images/Logo_CodeClas.png" alt="Logo da CodeCLass">
             </div>
-            <li class="nav-menu">
-                <ul><a href="index.html">Home</a></ul>
-                <ul><a href="cursos.html">Cursos</a></ul>
-                <ul><a href="aula.html">Aula</a></ul>
-                <ul><a href="perfil.html">Perfil</a></ul>
-                <ul><a href="review.html">Fale Conosco</a></ul>
-            </li>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="aula.html">Aula</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="review.html">Fale Conosco</a></li>
+            </ul>
             <div class="user-actions">
                 <!-- Botões de login/logout-->
                 <!-- TODO: Colocar a funcionalidade do botão -->
-                 <button class="BotaoLogin" type="button">Login</button>
-                 <form action="#" method="post">
-        
+                <button class="BotaoLogin" type="button">Login</button>
+                <form action="#" method="post">
                     <fieldset>
                         <legend>Login</legend>
                         <div>
-                        <label for="usuario">Usuário:</label>
+                            <label for="usuario">Usuário:</label>
                             <input type="text" id="usuario" name="nome_usuario" placeholder="Digite seu usuário">
                         </div>
-
                         <div>
                             <label for="senha">Senha:</label>
                             <input type="password" id="senha" name="senha_usuario" placeholder="Digite sua senha">
                         </div>
-
                         <div>
                             <button type="submit">Entrar</button>
                         </div>
-
                     </fieldset>
                 </form>
             </div>
@@ -52,304 +48,321 @@
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
-        <section class="aula-container">
-            <div class="video-player">
-                <!-- Player de vídeo/conteúdo da aula -->
-                <div class="player-placeholder">
-                    <iframe 
-                    id="aula0"
-                    width="560"
-                     height="315"
-                     src="https://www.youtube.com/embed/2fzL6tC5FUk?si=PdSBOJUwSyHhzr4k" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                     referrerpolicy="strict-origin-when-cross-origin"
-                     allowfullscreen></iframe>
+        <!-- CONTAINER PRINCIPAL DAS AULAS -->
+        <div class="aula-principal">
+            <section class="aula-container">
+                <div class="video-player">
+                    <!-- Player de vídeo/conteúdo da aula -->
+                    <div class="player-placeholder">
+                        <iframe 
+                            id="aula0"
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/2fzL6tC5FUk?si=PdSBOJUwSyHhzr4k" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
-            </div>
 
-            <div class="aula-info">
-                <h1 class="aula-titulo">Aula 0 - Baixando a IDE e criando um Arquivo</h1>
-                <div class="aula-meta">
-                    <h2>Informações</h2>
-                    <p><Strong>Professor:</Strong> João Vitor <br>
-                    <strong>Duração:</strong> 3:32 <br></p>
+                <div class="aula-info">
+                    <h1 class="aula-titulo">Aula 0 - Baixando a IDE e criando um Arquivo</h1>
+                    <div class="aula-meta">
+                        <h2>Informações</h2>
+                        <p>
+                            <strong>Professor:</strong> João Vitor <br>
+                            <strong>Duração:</strong> 3:32 <br>
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="aula-descricao">
-                <!-- Descrição detalhada da aula -->
-                 <P>Aula inicial para a instalação da IDE para programar em C e criar seu primeiro arquivo</P>
-            </div>
-
-            <div class="aula-recursos">
-                <!-- Downloads, links, materiais complementares -->
-                 <a href="https://sourceforge.net/projects/orwelldevcpp/">Link para Baixar o Dev c++</a>
-            </div>
-
-            <div class="aula-questionario">
-            <p><strong>questões sobre a aula</strong></p>
-                <input type="radio" id="resposta-um" name="resposta" value="respostaum">
-                <label for="resposta-um">resposta um</label>
-
-                <input type="radio" id="resposta-dois" name="resposta" value="respostaDois">
-                <label for="resposta-dois">resposta dois</label>
-
-                <input type="radio" id="resposta-tres" name="resposta" value="respostaTres">
-                <label for="resposta-tres">resposta tres</label>
-
-                <button class="btnRespomder" type="button">Enviar resposta</button>
-            </div>
-        </section>
-
-        <section class="aula-container">
-            <div class="video-player">
-                <!-- Player de vídeo/conteúdo da aula -->
-                <div class="player-placeholder">
-                    <iframe 
-                    id="aula1"
-                    width="560"
-                     height="315" 
-                     src="https://www.youtube.com/embed/-TV_m4Vihfg?si=nFaXwSnkFdMQEaA6"
-                      title="YouTube video player" 
-                      frameborder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                       referrerpolicy="strict-origin-when-cross-origin"
-                     allowfullscreen></iframe>
+                <div class="aula-descricao">
+                    <!-- Descrição detalhada da aula -->
+                    <p>Aula inicial para a instalação da IDE para programar em C e criar seu primeiro arquivo</p>
                 </div>
-            </div>
 
-            <div class="aula-info">
-                <h1 class="aula-titulo">Aula 1 - Estrutura e Comandos Básicos e Variáveis</h1>
-                <div class="aula-meta">
-                    <!-- Informações: duração, professor, etc -->
-                     <p><Strong>Professor:</Strong> João Vitor <br>
-                    <strong>Duração:</strong> 17:37 <br></p>
+                <div class="aula-recursos">
+                    <!-- Downloads, links, materiais complementares -->
+                    <a href="https://sourceforge.net/projects/orwelldevcpp/">Link para Baixar o Dev c++</a>
                 </div>
-            </div>
 
-            <div class="aula-descricao">
-                <p>Nessa aula vc ira aprender estruturação do código e os comandos básicos em C, assim como o que são variaveis </p>
-            </div>
+                <div class="aula-questionario">
+                    <p><strong>Questões sobre a aula</strong></p>
+                    <input type="radio" id="resposta-um-0" name="resposta-0" value="respostaum">
+                    <label for="resposta-um-0">resposta um</label>
 
-            <div class="aula-recursos">
-                <!-- Downloads, links, materiais complementares -->
-            </div>
+                    <input type="radio" id="resposta-dois-0" name="resposta-0" value="respostaDois">
+                    <label for="resposta-dois-0">resposta dois</label>
 
-             <div class="aula-questionario">
-            <p><br><strong>questões sobre a aula</strong></p><br>
-                <input type="radio" id="resposta-um" name="resposta" value="respostaum">
-                <label for="resposta-um">resposta um</label>
-                
-                <input type="radio" id="resposta-dois" name="resposta" value="respostaDois">
-                <label for="resposta-dois">resposta dois</label>
-                
-                <input type="radio" id="resposta-tres" name="resposta" value="respostaTres">
-                <label for="resposta-tres">resposta tres</label>
-                    <br>
-                <button class="btnRespomder" type="button">Enviar resposta</button>
-            </div>
-        
-        </section>
+                    <input type="radio" id="resposta-tres-0" name="resposta-0" value="respostaTres">
+                    <label for="resposta-tres-0">resposta tres</label>
 
-        <section class="aula-container">
-            <div class="video-player">
-                <!-- Player de vídeo/conteúdo da aula -->
-                <div class="player-placeholder">
-                    <iframe 
-                    id="aula2"
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/Ktj1gdtUZqI?si=Syp3acVMl8tcFW_X" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                    </iframe>
+                    <button class="btnRespomder" type="button">Enviar resposta</button>
                 </div>
-            </div>
+            </section>
 
-            <div class="aula-info">
-                <h1 class="aula-titulo">Aula 2 -Estruturas de decisão If e Else</h1>
-                <div class="aula-meta">
-                    <!-- Informações: duração, professor, etc -->
-                     <p><Strong>Professor:</Strong> João Vitor <br>
-                    <strong>Duração:</strong> 10:52 <br></p>
+            <section class="aula-container">
+                <div class="video-player">
+                    <!-- Player de vídeo/conteúdo da aula -->
+                    <div class="player-placeholder">
+                        <iframe 
+                            id="aula1"
+                            width="560"
+                            height="315" 
+                            src="https://www.youtube.com/embed/-TV_m4Vihfg?si=nFaXwSnkFdMQEaA6"
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
-            </div>
 
-            <div class="aula-descricao">
-                <p>Nessa aula vc vai aprender como funciona as estruturas da decisão em linguagem C, em especifico os comandos If e Else</p>
-            </div>
-
-            <div class="aula-recursos">
-                <!-- Downloads, links, materiais complementares -->
-            </div>
-
-             <div class="aula-questionario">
-            <p><strong>questões sobre a aula</strong></p>
-                <input type="radio" id="resposta-um" name="resposta" value="respostaum">
-                <label for="resposta-um">resposta um</label>
-
-                <input type="radio" id="resposta-dois" name="resposta" value="respostaDois">
-                <label for="resposta-dois">resposta dois</label>
-
-                <input type="radio" id="resposta-tres" name="resposta" value="respostaTres">
-                <label for="resposta-tres">resposta tres</label>
-
-                <button class="btnRespomder" type="button">Enviar resposta</button>
-            </div>
-        
-        </section>
-
-        <section class="aula-container">
-            <div class="video-player">
-                <!-- Player de vídeo/conteúdo da aula -->
-                <div class="player-placeholder">
-                    <iframe 
-                    id="aula3"
-                    width="560"
-                     height="315" 
-                     src="https://www.youtube.com/embed/AX2hGIqP-P8?si=Aaqw3IOC52JrZFHE"
-                      title="YouTube video player" 
-                      frameborder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                       referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen></iframe>
+                <div class="aula-info">
+                    <h1 class="aula-titulo">Aula 1 - Estrutura e Comandos Básicos e Variáveis</h1>
+                    <div class="aula-meta">
+                        <!-- Informações: duração, professor, etc -->
+                        <p>
+                            <strong>Professor:</strong> João Vitor <br>
+                            <strong>Duração:</strong> 17:37 <br>
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="aula-info">
-                <h1 class="aula-titulo">Aula 3 - Estruturas de Repetição</h1>
-                <div class="aula-meta">
-                    <!-- Informações: duração, professor, etc -->
-                      <p><Strong>Professor:</Strong> João Vitor <br>
-                    <strong>Duração:</strong> 14:28 <br></p>
+                <div class="aula-descricao">
+                    <p>Nessa aula vc ira aprender estruturação do código e os comandos básicos em C, assim como o que são variaveis</p>
                 </div>
-            </div>
 
-            <div class="aula-descricao">
-                <p>Nessa aula você ira apren o que são estruturas de repetição e como elas funcionam em linguagem C</p>
-            </div>
-
-            <div class="aula-recursos">
-                <!-- Downloads, links, materiais complementares -->
-            </div>
-
-             <div class="aula-questionario">
-            <p><strong>questões sobre a aula</strong></p>
-                <input type="radio" id="resposta-um" name="resposta" value="respostaum">
-                <label for="resposta-um">resposta um</label>
-
-                <input type="radio" id="resposta-dois" name="resposta" value="respostaDois">
-                <label for="resposta-dois">resposta dois</label>
-
-                <input type="radio" id="resposta-tres" name="resposta" value="respostaTres">
-                <label for="resposta-tres">resposta tres</label>
-
-                <button class="btnRespomder" type="button">Enviar resposta</button>
-            </div>
-        
-        </section>
-
-        <section class="aula-container">
-            <div class="video-player">
-                <!-- Player de vídeo/conteúdo da aula -->
-                <div class="player-placeholder">
-                    <iframe
-                    id="aula4"
-                     width="560"
-                      height="315"
-                       src="https://www.youtube.com/embed/duX-NUyJhTA?si=MfaqXi8QrfiVi0-b" 
-                    title="YouTube video player"
-                     frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen></iframe>
+                <div class="aula-recursos">
+                    <!-- Downloads, links, materiais complementares -->
                 </div>
-            </div>
 
-            <div class="aula-info">
-                <h1 class="aula-titulo">Aula 4 - Vetores</h1>
-                <div class="aula-meta">
-                    <!-- Informações: duração, professor, etc -->
-                     <p><Strong>Professor:</Strong> João Vitor <br>
-                    <strong>Duração:</strong> 14:28 <br></p>
+                <div class="aula-questionario">
+                    <p><strong>Questões sobre a aula</strong></p>
+                    <input type="radio" id="resposta-um-1" name="resposta-1" value="respostaum">
+                    <label for="resposta-um-1">resposta um</label>
+                    
+                    <input type="radio" id="resposta-dois-1" name="resposta-1" value="respostaDois">
+                    <label for="resposta-dois-1">resposta dois</label>
+                    
+                    <input type="radio" id="resposta-tres-1" name="resposta-1" value="respostaTres">
+                    <label for="resposta-tres-1">resposta tres</label>
+
+                    <button class="btnRespomder" type="button">Enviar resposta</button>
                 </div>
-            </div>
+            </section>
 
-            <div class="aula-descricao">
-                <p>Nessa aula você vai aprender o que são vetores e sua implementar eles em linguagem C</p>
-            </div>
-
-            <div class="aula-recursos">
-                <!-- Downloads, links, materiais complementares -->
-            </div>
-
-             <div class="aula-questionario">
-            <p><strong>questões sobre a aula</strong></p>
-                <input type="radio" id="resposta-um" name="resposta" value="respostaum">
-                <label for="resposta-um">resposta um</label>
-
-                <input type="radio" id="resposta-dois" name="resposta" value="respostaDois">
-                <label for="resposta-dois">resposta dois</label>
-
-                <input type="radio" id="resposta-tres" name="resposta" value="respostaTres">
-                <label for="resposta-tres">resposta tres</label>
-
-                <button class="btnRespomder" type="button">Enviar resposta</button>
-            </div>
-        
-        </section>
-
-        <section class="aula-container">
-            <div class="video-player">
-                <!-- Player de vídeo/conteúdo da aula -->
-                <div class="player-placeholder">
-                     <iframe width="560"
-                      height="315" 
-                      src="https://www.youtube.com/embed/KO-gFz9z56c?si=GfgNB9BzTmF-6bGG" 
-                     title="YouTube video player" 
-                     frameborder="0"
-                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin" 
-                     allowfullscreen></iframe>
+            <section class="aula-container">
+                <div class="video-player">
+                    <!-- Player de vídeo/conteúdo da aula -->
+                    <div class="player-placeholder">
+                        <iframe 
+                            id="aula2"
+                            width="560" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/Ktj1gdtUZqI?si=Syp3acVMl8tcFW_X" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
-            </div>
 
-            <div class="aula-info">
-                <h1 class="aula-titulo">Aula 5 - Exercicio</h1>
-                <div class="aula-meta">
-                    <!-- Informações: duração, professor, etc -->
-                     <p><Strong>Professor:</Strong> João Vitor <br>
-                    <strong>Duração:</strong> 14:28 <br></p>
+                <div class="aula-info">
+                    <h1 class="aula-titulo">Aula 2 - Estruturas de decisão If e Else</h1>
+                    <div class="aula-meta">
+                        <!-- Informações: duração, professor, etc -->
+                        <p>
+                            <strong>Professor:</strong> João Vitor <br>
+                            <strong>Duração:</strong> 10:52 <br>
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="aula-descricao">
-                <p>Nessa aula você terá alguns Exercicios para acompanhar e resolver junto ao professor para fixar o que aprendeu</p>
-            </div>
+                <div class="aula-descricao">
+                    <p>Nessa aula vc vai aprender como funciona as estruturas da decisão em linguagem C, em especifico os comandos If e Else</p>
+                </div>
 
-            <div class="aula-recursos">
-                <!-- Downloads, links, materiais complementares -->
-            </div>
+                <div class="aula-recursos">
+                    <!-- Downloads, links, materiais complementares -->
+                </div>
 
-             <div class="aula-questionario">
-            <p><strong>questões sobre a aula</strong></p>
-                <input type="radio" id="resposta-um" name="resposta" value="respostaum">
-                <label for="resposta-um">resposta um</label>
+                <div class="aula-questionario">
+                    <p><strong>Questões sobre a aula</strong></p>
+                    <input type="radio" id="resposta-um-2" name="resposta-2" value="respostaum">
+                    <label for="resposta-um-2">resposta um</label>
 
-                <input type="radio" id="resposta-dois" name="resposta" value="respostaDois">
-                <label for="resposta-dois">resposta dois</label>
+                    <input type="radio" id="resposta-dois-2" name="resposta-2" value="respostaDois">
+                    <label for="resposta-dois-2">resposta dois</label>
 
-                <input type="radio" id="resposta-tres" name="resposta" value="respostaTres">
-                <label for="resposta-tres">resposta tres</label>
+                    <input type="radio" id="resposta-tres-2" name="resposta-2" value="respostaTres">
+                    <label for="resposta-tres-2">resposta tres</label>
 
-                <button class="btnRespomder" type="button">Enviar resposta</button>
-            </div>
-        
-        </section>
+                    <button class="btnRespomder" type="button">Enviar resposta</button>
+                </div>
+            </section>
+
+            <section class="aula-container">
+                <div class="video-player">
+                    <!-- Player de vídeo/conteúdo da aula -->
+                    <div class="player-placeholder">
+                        <iframe 
+                            id="aula3"
+                            width="560"
+                            height="315" 
+                            src="https://www.youtube.com/embed/AX2hGIqP-P8?si=Aaqw3IOC52JrZFHE"
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="aula-info">
+                    <h1 class="aula-titulo">Aula 3 - Estruturas de Repetição</h1>
+                    <div class="aula-meta">
+                        <!-- Informações: duração, professor, etc -->
+                        <p>
+                            <strong>Professor:</strong> João Vitor <br>
+                            <strong>Duração:</strong> 14:28 <br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="aula-descricao">
+                    <p>Nessa aula você ira aprender o que são estruturas de repetição e como elas funcionam em linguagem C</p>
+                </div>
+
+                <div class="aula-recursos">
+                    <!-- Downloads, links, materiais complementares -->
+                </div>
+
+                <div class="aula-questionario">
+                    <p><strong>Questões sobre a aula</strong></p>
+                    <input type="radio" id="resposta-um-3" name="resposta-3" value="respostaum">
+                    <label for="resposta-um-3">resposta um</label>
+
+                    <input type="radio" id="resposta-dois-3" name="resposta-3" value="respostaDois">
+                    <label for="resposta-dois-3">resposta dois</label>
+
+                    <input type="radio" id="resposta-tres-3" name="resposta-3" value="respostaTres">
+                    <label for="resposta-tres-3">resposta tres</label>
+
+                    <button class="btnRespomder" type="button">Enviar resposta</button>
+                </div>
+            </section>
+
+            <section class="aula-container">
+                <div class="video-player">
+                    <!-- Player de vídeo/conteúdo da aula -->
+                    <div class="player-placeholder">
+                        <iframe
+                            id="aula4"
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/duX-NUyJhTA?si=MfaqXi8QrfiVi0-b" 
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="aula-info">
+                    <h1 class="aula-titulo">Aula 4 - Vetores</h1>
+                    <div class="aula-meta">
+                        <!-- Informações: duração, professor, etc -->
+                        <p>
+                            <strong>Professor:</strong> João Vitor <br>
+                            <strong>Duração:</strong> 14:28 <br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="aula-descricao">
+                    <p>Nessa aula você vai aprender o que são vetores e sua implementar eles em linguagem C</p>
+                </div>
+
+                <div class="aula-recursos">
+                    <!-- Downloads, links, materiais complementares -->
+                </div>
+
+                <div class="aula-questionario">
+                    <p><strong>Questões sobre a aula</strong></p>
+                    <input type="radio" id="resposta-um-4" name="resposta-4" value="respostaum">
+                    <label for="resposta-um-4">resposta um</label>
+
+                    <input type="radio" id="resposta-dois-4" name="resposta-4" value="respostaDois">
+                    <label for="resposta-dois-4">resposta dois</label>
+
+                    <input type="radio" id="resposta-tres-4" name="resposta-4" value="respostaTres">
+                    <label for="resposta-tres-4">resposta tres</label>
+
+                    <button class="btnRespomder" type="button">Enviar resposta</button>
+                </div>
+            </section>
+
+            <section class="aula-container">
+                <div class="video-player">
+                    <!-- Player de vídeo/conteúdo da aula -->
+                    <div class="player-placeholder">
+                        <iframe 
+                            width="560"
+                            height="315" 
+                            src="https://www.youtube.com/embed/KO-gFz9z56c?si=GfgNB9BzTmF-6bGG" 
+                            title="YouTube video player" 
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="aula-info">
+                    <h1 class="aula-titulo">Aula 5 - Exercicio</h1>
+                    <div class="aula-meta">
+                        <!-- Informações: duração, professor, etc -->
+                        <p>
+                            <strong>Professor:</strong> João Vitor <br>
+                            <strong>Duração:</strong> 14:28 <br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="aula-descricao">
+                    <p>Nessa aula você terá alguns Exercicios para acompanhar e resolver junto ao professor para fixar o que aprendeu</p>
+                </div>
+
+                <div class="aula-recursos">
+                    <!-- Downloads, links, materiais complementares -->
+                </div>
+
+                <div class="aula-questionario">
+                    <p><strong>Questões sobre a aula</strong></p>
+                    <input type="radio" id="resposta-um-5" name="resposta-5" value="respostaum">
+                    <label for="resposta-um-5">resposta um</label>
+
+                    <input type="radio" id="resposta-dois-5" name="resposta-5" value="respostaDois">
+                    <label for="resposta-dois-5">resposta dois</label>
+
+                    <input type="radio" id="resposta-tres-5" name="resposta-5" value="respostaTres">
+                    <label for="resposta-tres-5">resposta tres</label>
+
+                    <button class="btnRespomder" type="button">Enviar resposta</button>
+                </div>
+            </section>
+        </div>
+        <!-- FIM DO CONTAINER PRINCIPAL DAS AULAS -->
 
         <section class="sidebar">
             <div class="modulos-aulas">
@@ -357,21 +370,23 @@
                 <h3>Conteúdo do Curso</h3>
                 <div class="lista-modulos">
                     <!-- Módulos e aulas aqui -->
-                     <li>
-                        <ul><a href="#aula0"> Aula 0</a></ul>
-                        <ul><a href="#aula1"> Aula 1</a></ul>
-                        <ul><a href="#aula2"> Aula 2</a></ul>
-                        <ul><a href="#aula3"> Aula 3</a></ul>
-                        <ul><a href="#aula4"> Aula 4</a></ul>
-                        <ul><a href="#aula5"> Aula 5</a></ul>
-                     </li>
-
+                    <ul>
+                        <li><a href="#aula0">Aula 0</a></li>
+                        <li><a href="#aula1">Aula 1</a></li>
+                        <li><a href="#aula2">Aula 2</a></li>
+                        <li><a href="#aula3">Aula 3</a></li>
+                        <li><a href="#aula4">Aula 4</a></li>
+                        <li><a href="#aula5">Aula 5</a></li>
+                    </ul>
                 </div>
             </div>
 
             <div class="progresso">
                 <!-- Barra de progresso do curso -->
-                 <p>Taxa de Conclusão do curso: </p>
+                <p>Taxa de Conclusão do curso: </p>
+                <div class="barra-progresso">
+                    <div class="progresso-interno" style="width: 0%"></div>
+                </div>
             </div>
         </section>
 
@@ -380,33 +395,37 @@
             <h2>Comentários</h2>
             <div class="comentarios-lista">
                 <!-- Lista de comentários -->
-                  <div>
-                        <label for="curso-comentarios">Seu comentario:</label>
-                            <input type="text" id="comentario" name="curso-comentarios" placeholder="Digite seu comentario">
-                            <button type="button" id="comentar">Comentar</button>
-                        </div>
-                        <li>
-                            <Ul><strong>User543:</strong> Muito bom o curso!!!</Ul>
-                            <ul><strong>José Carlos:</strong> Funciona da mesma forma pra Linux??</ul>
-                            <ul><Strong>DavyJonasMago:</Strong> Eu já zerei todos os cursos</ul>
-                        </li>
+                <div>
+                    <label for="comentario">Seu comentario:</label>
+                    <input type="text" id="comentario" name="curso-comentarios" placeholder="Digite seu comentario">
+                    <button type="button" id="comentar">Comentar</button>
+                </div>
+                <ul>
+                    <li><strong>User543:</strong> Muito bom o curso!!!</li>
+                    <li><strong>José Carlos:</strong> Funciona da mesma forma pra Linux??</li>
+                    <li><strong>DavyJonasMago:</strong> Eu já zerei todos os cursos</li>
+                </ul>
             </div>
         </section>
     </main>
 
-   <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer>
         <div class="footer-content">
             <!-- Links e informações -->
-             <li><a href="index.html">Home</a></li>
+            <ul>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="cursos.html">Cursos</a></li>
                 <li><a href="aula.html">Aula</a></li>
                 <li><a href="perfil.html">Perfil</a></li>
                 <li><a href="review.html">Fale Conosco</a></li>
+            </ul>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 CodeClass. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script src="functions.js"></script>
 </body>
 </html>
