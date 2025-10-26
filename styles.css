@@ -146,9 +146,13 @@ nav {
    LAYOUT PRINCIPAL
    ======================================== */
 main {
-    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 320px; /* LARGURA FIXA PARA SIDEBAR */
+    gap: 2rem;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 2rem;
+    align-items: start;
 }
 
 .hero {
@@ -512,7 +516,9 @@ main {
     grid-column: 1;
     display: flex;
     flex-direction: column;
-    gap: 2rem; /* ESPAÇO ENTRE OS CONTAINERS DAS AULAS */
+    gap: 2rem;
+    width: 100%;
+    max-width: calc(100% - 20px); /* GARANTE QUE NÃO SOBREPONHA */
 }
 
 /* Cada container de aula ocupa 100% da largura */
@@ -523,7 +529,8 @@ main {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     border: 1px solid #2a0a1a;
     transition: all 0.3s ease;
-    width: 100%; /* Garante 100% de largura */
+    width: 100%;
+    box-sizing: border-box; /* INCLUI PADDING NA LARGURA */
 }
 
 .aula-container:hover {
@@ -538,12 +545,25 @@ main {
     top: 2rem;
     align-self: start;
     height: fit-content;
+    width: 300px; /* LARGURA FIXA */
+    flex-shrink: 0; /* NÃO REDUZ */
 }
 
 /* Seção de comentários ocupa ambas as colunas */
 .comentarios {
-    grid-column: 1 / -1; /* Ocupa da coluna 1 até a última */
+    background: linear-gradient(145deg, #1a1a2e 0%, #2a0a1a 100%);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2a0a1a;
+    grid-column: 1; /* APENAS NA PRIMEIRA COLUNA */
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    max-width: calc(100% - 340px); /* LARGURA REDUZIDA - NÃO SOBREPÕE SIDEBAR */
+    box-sizing: border-box;
 }
 
 .video-player {
@@ -820,6 +840,105 @@ main {
     border-radius: 4px;
     transition: width 0.5s ease;
     width: 0%; /* Será controlado por JavaScript */
+}
+
+
+.comentarios h2 {
+    color: #8b0000;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.comentarios-lista {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+/* FORMULÁRIO MAIS COMPACTO */
+.comentarios-lista > div {
+    background-color: rgba(26, 26, 46, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid #2a0a1a;
+    flex-shrink: 0;
+}
+
+.comentarios-lista label {
+    color: #e0e0e0;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.comentarios-lista input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid #2a0a1a;
+    border-radius: 6px;
+    background-color: #0a0f1c;
+    color: #e0e0e0;
+    margin-bottom: 0.75rem;
+    transition: border-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.comentarios-lista input[type="text"]:focus {
+    outline: none;
+    border-color: #8b0000;
+}
+
+#comentar {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+#comentar:hover {
+    background-color: #a00;
+    transform: translateY(-1px);
+}
+
+/* LISTA DE COMENTÁRIOS COM SCROLL */
+.comentarios-lista > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex: 1;
+    max-height: 200px;
+}
+
+.comentarios-lista > ul li {
+    background-color: rgba(42, 10, 26, 0.6);
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid #8b0000;
+    transition: transform 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.comentarios-lista > ul li:hover {
+    transform: translateX(3px);
+}
+
+
+.comentarios-lista strong {
+    color: #ff6b9d;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
 }
 
 /* ========================================
