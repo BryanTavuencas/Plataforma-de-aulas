@@ -24,7 +24,6 @@
             </li>
             <div class="user-actions">
                 <!-- Botões de login/logout-->
-                <!-- TODO: Colocar a funcionalidade do botão -->
                  <button class="BotaoLogin" type="button">Login</button>
                  <form action="#" method="post">
 
@@ -83,7 +82,9 @@
                         <!-- Lista de cursos -->
                          <li>
                             <ul>
-                                <a href ="cursos.html" id="cursoC">Curso de linguagem C: </a><strong> O%</strong>
+                                <!-- agora o link leva para a página de aulas -->
+                                <a href="aula.html" id="cursoC">Curso de linguagem C:</a>
+                                <span id="cursoPercent" class="curso-percent">0%</span>
                             </ul>
                          </li>
                     </div>
@@ -127,9 +128,15 @@
             <!-- Estatísticas de aprendizado -->
             <h2>Estatísticas</h2>
             <div class="stats-grid">
-                <!-- Cards com estatísticas -->
-                 <h3>Curso de linguagem C</h3>
-                 <P><strong>0%</strong></P>
+                <!-- Mini-sidebar reduzida: somente barra de progresso (sem lista de aulas) -->
+                <div class="mini-sidebar">
+                    <div class="progresso">
+                        <p>Taxa de Conclusão do curso:</p>
+                        <div class="barra-progresso">
+                            <div class="progresso-interno" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
