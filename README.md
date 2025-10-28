@@ -127,15 +127,16 @@ cd plataforma-de-aulas
   - Linguagem Python
   - Linguagem C
   - Machine Learning
-- [x] Logo da plataforma
-- [x] Ícones customizados
-- [x] Vídeos de exemplo
+- [ ] Logo da plataforma
+- [ ] Ícones customizados
+- [ ] Vídeos de exemplo
 
 ### Próximos Passos
-- [x] Sistema de autenticação simulado
-- [x] Salvamento de progresso no localStorage
-- [x] Sistema de certificados
-- [x] Área de comentários interativa
+- [ ] Sistema de autenticação simulado
+- [ ] Salvamento de progresso no localStorage
+- [ ] Sistema de certificados
+- [ ] Área de comentários interativa
+- [ ] Modo escuro/claro
 
 ---
 
