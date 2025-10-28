@@ -136,7 +136,6 @@ cd plataforma-de-aulas
 - [ ] Salvamento de progresso no localStorage
 - [ ] Sistema de certificados
 - [ ] Área de comentários interativa
-- [ ] Modo escuro/claro
 
 ---
 
