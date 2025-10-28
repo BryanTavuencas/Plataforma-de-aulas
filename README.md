@@ -9,13 +9,13 @@ Esqueleto de uma plataforma de aulas online desenvolvida com HTML, CSS e JavaScr
 ```
 Plataforma de aulas-web/
 │
+├── styles.css          # Arquivo de estilos CSS
+├── functions.js        # Arquivo de funções JavaScript
+│
 ├── index.html          # Página inicial (Home)
 ├── cursos.html         # Página de listagem de cursos
 ├── aula.html           # Página de visualização de aula
 ├── perfil.html         # Página de perfil do usuário
-│
-├── styles.css          # Arquivo de estilos CSS
-├── functions.js        # Arquivo de funções JavaScript
 │
 ├── Assets/             # Pasta de recursos (imagens, vídeos, etc)
 │   ├── images/         # Imagens
@@ -53,26 +53,19 @@ Plataforma de aulas-web/
 - Estatísticas de aprendizado
 - Cursos em andamento
 
-## 🎨 Arquivos de Estilo e Script
+## 🎨 Arquivos do Projeto
 
-### **styles.css**
-Contém estrutura organizada com:
-- Variáveis CSS (cores, espaçamentos, fontes)
-- Reset e estilos globais
-- Estilos específicos por página
-- Classes utilitárias
-- Media queries para responsividade
+### CSS (`styles.css`)
+- Contém variáveis, reset global, estilos por componente e media queries para responsividade.
 
-### **functions.js**
-Contém estrutura organizada com:
-- Configurações globais
-- Funções de navegação
-- Funções de autenticação
-- Funções de gerenciamento de cursos
-- Funções de aulas e progresso
-- Funções de perfil e comentários
-- Utilitários e helpers
-- Event listeners
+### JavaScript (`functions.js`)
+- Contém a lógica de renderização dinâmica de cards, filtros de busca, listeners e utilitários.
+
+### HTML (páginas)
+- `index.html`, `cursos.html`, `aula.html`, `perfil.html` — estruturas e placeholders para conteúdo e navegação.
+
+### Assets
+- Pasta `Assets/` com `images/`, `videos/` e `icons/` para armazenar recursos usados pelo projeto.
 
 ## 🚀 Como Usar
 
@@ -87,34 +80,31 @@ Contém estrutura organizada com:
    - Adicione funcionalidades no `functions.js`
    - Adicione conteúdo nas seções marcadas com comentários HTML
 
-## 📝 Próximos Passos para Implementação
+## ✅ Status do Projeto (resumo das tarefas principais)
 
-### CSS (styles.css)
-- [ ] Definir paleta de cores nas variáveis CSS
-- [ ] Estilizar header e navegação
-- [ ] Criar componentes de cards
-- [ ] Implementar layout responsivo
-- [ ] Adicionar animações e transições
+### Tarefas de projeto
+- [x] Planejar estrutura do projeto — Estrutura de páginas e pastas criada. (Responsável: Gustavo / revisão: Bryan)
+- [x] Atualizar `index.html` — Página inicial preenchida com esqueleto e navegação. (Responsável: Gustavo)
+- [x] Criar `cursos.html`, `aula.html`, `perfil.html` — Páginas criadas com estrutura básica e marcadores. (Responsável: Gustavo)
+- [x] Padronizar `styles.css` e `functions.js` — Arquivos principais com organização inicial, variáveis e utilitários básicos. (Responsável: João para CSS, Bryan para JS)
+- [x] Adicionar `README.md` e `Assets/` — README atualizado (este) e pasta de assets criada. (Responsável: Gustavo)
+- [x] Verificação rápida e correção de sintaxe — Erros de CSS corrigidos (chaves/propriedades) e validação local. (Responsável: João)
+- [x] Resolver erro de `git pull` (develop) — Orientações e commit feito; branch sincronizado localmente. (Responsável: Bryan)
+- [x] Ajustar responsividade para zoom reduzido — Regras CSS adicionadas visando zoom/out extremo e viewports amplos. (Responsável: Bryan)
+- [x] Aumentar legibilidade em zoom 25% — Media queries e ajustes de font-size aplicados para manter legibilidade. (Responsável: Bryan)
+- [~~] ~~Melhorar espaçamento do card de curso~~ ~~CANCELADO~~ — Em vez de uma reforma visual completa dos cards, aplicamos ajustes menores: adicionamos imagens nos cards, fizemos pequenos ajustes de padding e tornamos o layout responsivo. (Decisão: não aplicar refatoração completa nesta etapa) (Responsável proposto: João)
+- [x] Inserir imagem e meta no card de curso — Imagens de cursos adicionadas em `Assets/images/` e integradas nos cards; meta (nível/autor) presente no HTML. (Responsável: Gustavo)
 
-### JavaScript (functions.js)
-- [ ] Implementar sistema de login/logout
-- [ ] Criar lógica de filtros e busca
-- [ ] Desenvolver player de vídeo
-- [ ] Implementar sistema de progresso
-- [ ] Adicionar validações de formulário
-- [ ] Gerenciar estado da aplicação com localStorage
+### Estado dos Assets
+- [x] Imagens de cursos adicionadas: `Linguagem Java.png`, `Linguagem Javascript.png`, `Linguagem Python.png`, `Linguagem-C.png`, `MachineLearning.png`. (Responsável: Gustavo)
+- [ ] Logo da plataforma ainda pendente (pode ser fornecida para inclusão). (Sugestão: João pode aplicar styling quando logo disponível.)
 
-### HTML
-- [X] Adicionar conteúdo real nas páginas
-- [X] Criar estrutura de cards de cursos
-- [X] Implementar formulários
-- [X] Adicionar elementos de mídia
+### JavaScript (funcionalidades já implementadas)
+- [x] Lógica de renderização dinâmica de cards e filtros básicos (buscar + filtro por nível) — Implementado em `functions.js`. (Responsável: Bryan)
+- [x] Botão de limpeza de filtros trocado por um ícone (lixeira) e comportamento ajustado — Implementado. (Responsável: Bryan)
 
-### Assets
-- [ ] Adicionar logo da plataforma
-- [ ] Incluir imagens de cursos
-- [ ] Adicionar ícones
-- [ ] Preparar vídeos de exemplo
+### Observações sobre o que ficou pendente / cancelado
+- ~~CANCELADO: Implementação completa de refatoração do espaçamento dos cards~~ — Em lugar disso foi feita a correção de sintaxe no CSS e melhoria pontual na responsividade e inclusão de imagens. Se desejar, podemos reabrir essa tarefa e refatorar os cards (criar componentes e padronizar espaçamento). (Proposta: tarefa futura para João)
 
 ## 🛠️ Tecnologias Utilizadas
 
