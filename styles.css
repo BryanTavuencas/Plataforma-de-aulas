@@ -1,3 +1,85 @@
+/* Botão Limpar Filtros */
+#btnLimparFiltros {
+    background-color: #b0b0b0;
+    color: #222;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width: 85%%;
+    min-width: 120px;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+#btnLimparFiltros:hover {
+    background-color: #e0e0e0;
+    color: #111;
+}
+@media (max-width: 420px) {
+    #btnLimparFiltros {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
+    }
+}
+/* Destaque para cursos em breve */
+.curso-em-breve {
+/* Espaçamento vertical entre botões de filtro */
+.filtros-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+}
+/* Espaçamento vertical entre botões de filtro */
+.filtros-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+}
+    display: block;
+    background: #b0b0b0;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    letter-spacing: 0.08em;
+    margin-top: 0.5rem;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.13);
+    opacity: 0.95;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    text-align: left;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+.curso-actions {
+    width: 100%;
+}
+.curso-btn, .curso-em-breve {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: left;
+}
 /* ========================================
     RESET E ESTILOS GLOBAIS
     ======================================== */
@@ -467,6 +549,7 @@ main {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
     border: 1px solid #2a0a1a;
+    padding: 1rem;
 }
 
 .curso-card:hover {
@@ -477,54 +560,76 @@ main {
 
 .curso-imagem {
     width: 100%;
-    height: 200px;
-    background-color: #0a0f1c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 3px solid #8b0000;
+    display: block;
+    text-align: center;
+    padding: 0.5rem 0 0;
 }
 
 .curso-imagem img {
-    width: 80px;
-    height: 80px;
+    width: 96px;
+    height: 96px;
     object-fit: contain;
+    display: block;
+    margin: 0 auto 0.85rem;
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    z-index: 1;
 }
 
 .curso-conteudo {
-    padding: 1.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .curso-categoria {
     display: inline-block;
     background-color: #8b0000;
     color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-bottom: 0.8rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
 }
 
 .curso-titulo {
     color: #e0e0e0;
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-    line-height: 1.3;
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.35;
 }
 
 .curso-descricao {
-    color: #b0b0b0;
-    font-size: 0.9rem;
-    margin-bottom: 1.2rem;
-    line-height: 1.5;
+    color: #bfbfc3;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.curso-meta {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+    color: #d0cfd3;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.curso-meta .meta-label {
+    color: #e6e6e8;
+    font-weight: 700;
+    margin-right: 0.25rem;
 }
 
 .curso-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.2rem;
+    gap: 1rem;
+    margin-top: auto;
     padding-top: 1rem;
     border-top: 1px solid #2a0a1a;
 }
@@ -532,39 +637,40 @@ main {
 .curso-nivel {
     color: #ff6b9d;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 .curso-duracao {
     color: #b0b0b0;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 .curso-btn {
     background-color: #8b0000;
     color: white;
     border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 6px;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: 500;
-    transition: background-color 0.3s ease;
-    width: 100%;
+    transition: background-color 0.3s ease, transform 0.15s ease;
+    width: auto;
     text-align: center;
     text-decoration: none;
-    display: block;
+    display: inline-block;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
 }
 
 .curso-btn:hover {
-    background-color: #a00;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.35);
 }
 
-.cursos-grid .curso-btn {
-    width: auto;
-    display: inline-block;
-    padding: 0.6rem 1.1rem;
-    border-radius: 8px;
+@media (max-width: 420px) {
+    .curso-btn { width: 100%; display: block; }
 }
+
+
 
 .paginacao {
     display: flex;

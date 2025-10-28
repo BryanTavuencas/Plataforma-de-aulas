@@ -60,26 +60,27 @@
         <section class="filtros">
             <!-- Filtros de busca e categorias -->
             <div class="filtros-grid">
-            <div class="busca">
-                <!-- Campo de busca -->
-                 <label for="busca-cursos"><strong>Busca:</strong></label>
-                <input type="text" id="busca-cursos" name="busca">
-            </div>
-            <div class="filtros-categorias">
-                <!-- Filtros por categoria, nível, etc -->
-                 <p><strong>Filtros por Nivel</strong></p>
-                <input type="radio" id="nivel-basico" name="nivel" value="basico">
-                <label for="nivel-basico">Básico</label>
-                <br>
-                <input type="radio" id="nivel-medio" name="nivel" value="medio">
-                <label for="nivel-medio">Médio</label>
-                <br>
-                <input type="radio" id="nivel-avancado" name="nivel" value="avancado">
-                <label for="nivel-avancado">Avançado</label>
-            </div>
-            <div>
-             <button id="btnBuscar" type="button">Buscar</button>
-            </div>
+                <div class="busca">
+                    <!-- Campo de busca -->
+                    <label for="busca-cursos"><strong>Busca:</strong></label>
+                    <input type="text" id="busca-cursos" name="busca">
+                </div>
+                <div class="filtros-categorias">
+                    <!-- Filtros por categoria, nível, etc -->
+                    <p><strong>Filtros por Nivel</strong></p>
+                    <input type="radio" id="nivel-basico" name="nivel" value="basico">
+                    <label for="nivel-basico">Básico</label>
+                    <br>
+                    <input type="radio" id="nivel-medio" name="nivel" value="medio">
+                    <label for="nivel-medio">Médio</label>
+                    <br>
+                    <input type="radio" id="nivel-avancado" name="nivel" value="avancado">
+                    <label for="nivel-avancado">Avançado</label>
+                </div>
+                <div class="filtros-botoes">
+                    <button id="btnBuscar" type="button">Buscar</button>
+                    <button id="btnLimparFiltros" type="button" title="Limpar Filtros">🗑️</button>
+                </div>
             </div>
         </section>
 
@@ -89,9 +90,15 @@
                 <!-- Cards de cursos serão inseridos aqui -->
                 <div class="curso-card">
                     <div class="curso-conteudo">
+                        <div class="curso-imagem">
+                            <img src="Assets/images/Linguagem-C.png" alt="Linguagem C" loading="lazy">
+                        </div>
                         <h3 class="curso-titulo">Curso básico de linguagem C</h3>
-                        <p class="curso-descricao">Curso básico para aprender Lógica de programação e o básico de linguagem C.</p>
-                        <!-- botão estilizado que usa a classe já presente em styles.css -->
+                        <p class="curso-descricao">Introdução à linguagem C, comandos básicos e lógica.</p>
+                        <div class="curso-meta">
+                            <span class="meta-label">Nível:</span><span>básico</span>
+                            <span class="meta-label">Autor:</span><span>João Vitor</span>
+                        </div>
                         <a href="aula.html" class="curso-btn">Ver Curso</a>
                     </div>
                 </div>

@@ -26,7 +26,7 @@ const SAMPLE_COURSES = [
         id: 'c-c-001',
         title: 'Curso básico de linguagem C',
         description: 'Introdução à linguagem C, comandos básicos e lógica.',
-        level: 'basico',
+    level: 'basico',
         author: 'João Vitor',
         duration: 3600,
         lessons: [
@@ -36,7 +36,45 @@ const SAMPLE_COURSES = [
             { id: 'aula3', title: 'Estruturas de repetição', duration: 868, correctAnswer: 'respostaum' },
             { id: 'aula4', title: 'Vetores', duration: 868, correctAnswer: 'respostaDois' },
             { id: 'aula5', title: 'Exercício', duration: 868, correctAnswer: 'respostaTres' }
-        ]
+        ],
+    img: 'Assets/images/Linguagem-C.png',
+        status: 'disponivel'
+    },
+    {
+        id: 'java-001',
+        title: 'Curso básico de linguagem Java',
+        description: 'Aprenda os fundamentos da linguagem Java, sintaxe e orientação a objetos.',
+    level: 'medio',
+        author: 'Equipe CodeClass',
+    img: 'Assets/images/Linguagem Java.png',
+        status: 'embreve'
+    },
+    {
+        id: 'js-001',
+        title: 'Curso básico de Javascript',
+        description: 'Primeiros passos com Javascript, lógica e manipulação do DOM.',
+    level: 'basico',
+        author: 'Equipe CodeClass',
+    img: 'Assets/images/Linguagem Javascript.png',
+        status: 'embreve'
+    },
+    {
+        id: 'py-001',
+        title: 'Curso básico de Python',
+        description: 'Introdução à linguagem Python, sintaxe simples e aplicações.',
+    level: 'medio',
+        author: 'Equipe CodeClass',
+    img: 'Assets/images/Linguagem Python.png',
+        status: 'embreve'
+    },
+    {
+        id: 'ml-001',
+        title: 'Machine Learning',
+        description: 'Conceitos iniciais de Machine Learning e aplicações práticas.',
+    level: 'avancado',
+        author: 'Equipe CodeClass',
+    img: 'Assets/images/MachineLearning.png',
+        status: 'embreve'
     }
 ];
 
@@ -128,47 +166,62 @@ function atualizarInterfaceUsuario() {
 
 // carregarCursos: Renderiza a grade de cursos na página de cursos.
 function carregarCursos() {
+    // Botão Limpar Filtros
+    const btnLimpar = document.getElementById('btnLimparFiltros');
+    if (btnLimpar) {
+        btnLimpar.onclick = function() {
+            const busca = document.getElementById('busca-cursos');
+            if (busca) busca.value = '';
+            document.querySelectorAll('input[name="nivel"]').forEach(r => r.checked = false);
+            renderCursos(SAMPLE_COURSES);
+        };
+    }
     const grid = document.querySelector('.cursos-grid');
     if (!grid) return;
 
-    grid.innerHTML = '';
-    const cursos = SAMPLE_COURSES;
+    function renderCursos(lista) {
+        grid.innerHTML = '';
+        lista.forEach(c => {
+            const card = document.createElement('article');
+            card.className = 'curso-card';
+            card.innerHTML = `
+                <div class="curso-imagem">
+                    <img src="${c.img || 'Assets/images/placeholder.png'}" alt="${c.title}" loading="lazy">
+                </div>
+                <h3 class="curso-titulo">${c.title}</h3>
+                <p class="curso-descricao">${c.description}</p>
+                <p><strong>Nível:</strong> ${c.level}</p>
+                <p><strong>Autor:</strong> ${c.author}</p>
+                <div class="curso-actions">
+                    ${c.status === 'disponivel' ? `<a href="aula.html" data-curso-id="${c.id}" class="curso-btn ver-curso">Ver Curso</a>` : `<span class="curso-em-breve">EM BREVE</span>`}
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+    }
 
-    cursos.forEach(c => {
-        const card = document.createElement('article');
-        card.className = 'curso-card';
-        card.innerHTML = `
-            <h3 class="curso-titulo">${c.title}</h3>
-            <p class="curso-descricao">${c.description}</p>
-            <p><strong>Nível:</strong> ${c.level}</p>
-            <p><strong>Autor:</strong> ${c.author}</p>
-            <div class="curso-actions">
-                <a href="aula.html" data-curso-id="${c.id}" class="curso-btn ver-curso">Ver Curso</a>
-            </div>
-        `;
-        grid.appendChild(card);
-    });
+    // Função de filtro combinando busca e nível
+    function filtrarCursos() {
+        const termo = document.getElementById('busca-cursos')?.value.trim().toLowerCase() || '';
+        const nivel = document.querySelector('input[name="nivel"]:checked')?.value || '';
+        let resultados = SAMPLE_COURSES.filter(c => {
+            const matchTermo =
+                c.title.toLowerCase().includes(termo) ||
+                c.description.toLowerCase().includes(termo) ||
+                c.author.toLowerCase().includes(termo);
+            const matchNivel = nivel ? (c.level === nivel) : true;
+            return matchTermo && matchNivel;
+        });
+        renderCursos(resultados);
+    }
 
+    // Render inicial
+    renderCursos(SAMPLE_COURSES);
+
+    // Filtro só ao clicar em buscar
     const btnBuscar = document.getElementById('btnBuscar');
     if (btnBuscar) {
-        btnBuscar.addEventListener('click', () => {
-            const termo = document.getElementById('busca-cursos')?.value || '';
-            const nivel = document.querySelector('input[name="nivel"]:checked')?.value || null;
-            let resultados = buscarCursos(termo);
-            if (nivel) resultados = resultados.filter(r => r.level === nivel);
-            
-            const grid = document.querySelector('.cursos-grid');
-            if (grid) {
-                grid.innerHTML = '';
-                resultados.forEach(c => {
-                    const card = document.createElement('article');
-                    card.className = 'curso-card';
-                    card.innerHTML = `<h3 class="curso-titulo">${c.title}</h3><p class="curso-descricao">${c.description}</p><a href="aula.html" data-curso-id="${c.id}" class="curso-btn ver-curso">Ver Curso</a>`;
-                    grid.appendChild(card);
-                });
-                document.querySelectorAll('.ver-curso').forEach(b => b.addEventListener('click', e => exibirCurso(e.currentTarget.dataset.cursoId)));
-            }
-        });
+        btnBuscar.onclick = filtrarCursos;
     }
 }
 
