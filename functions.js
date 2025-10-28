@@ -203,7 +203,15 @@ function carregarCursos() {
     // Função de filtro combinando busca e nível
     function filtrarCursos() {
         const termo = document.getElementById('busca-cursos')?.value.trim().toLowerCase() || '';
-        const nivel = document.querySelector('input[name="nivel"]:checked')?.value || '';
+        const nivelEl = document.querySelector('input[name="nivel"]:checked');
+        // usa value quando definido, senão usa id; normaliza alias (ex: 'intermediario' -> 'medio')
+        let nivel = '';
+        if (nivelEl) {
+            nivel = (nivelEl.value && nivelEl.value !== 'on') ? nivelEl.value : nivelEl.id;
+            nivel = (nivel || '').toString().toLowerCase();
+            if (nivel === 'intermediario' || nivel === 'intermediário') nivel = 'medio';
+            if (nivel === 'avançado') nivel = 'avancado';
+        }
         let resultados = SAMPLE_COURSES.filter(c => {
             const matchTermo =
                 c.title.toLowerCase().includes(termo) ||

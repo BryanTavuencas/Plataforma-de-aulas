@@ -67,19 +67,21 @@
                 </div>
                 <div class="filtros-categorias">
                     <!-- Filtros por categoria, nível, etc -->
-                    <p><strong>Filtros por Nivel</strong></p>
-                    <input type="radio" id="nivel-basico" name="nivel" value="basico">
-                    <label for="nivel-basico">Básico</label>
-                    <br>
-                    <input type="radio" id="nivel-medio" name="nivel" value="medio">
-                    <label for="nivel-medio">Médio</label>
-                    <br>
-                    <input type="radio" id="nivel-avancado" name="nivel" value="avancado">
-                    <label for="nivel-avancado">Avançado</label>
-                </div>
-                <div class="filtros-botoes">
-                    <button id="btnBuscar" type="button">Buscar</button>
-                    <button id="btnLimparFiltros" type="button" title="Limpar Filtros">🗑️</button>
+                    <div class="filtros-nivel">
+                        <input type="radio" name="nivel" id="basico" checked>
+                        <label for="basico">Básico</label>
+                        
+                        <input type="radio" name="nivel" id="intermediario">
+                        <label for="intermediario">Intermediário</label>
+                        
+                        <input type="radio" name="nivel" id="avancado">
+                        <label for="avancado">Avançado</label>
+                    </div>
+
+                    <div class="filtros-botoes">
+                        <button id="btnBuscar" type="button">Buscar</button>
+                        <button id="btnLimparFiltros" type="button" title="Limpar Filtros">🗑️</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -96,7 +98,7 @@
                         <h3 class="curso-titulo">Curso básico de linguagem C</h3>
                         <p class="curso-descricao">Introdução à linguagem C, comandos básicos e lógica.</p>
                         <div class="curso-meta">
-                            <span class="meta-label">Nível:</span><span>básico</span>
+                            <span class="meta-label">Nível:</span><span>Básico</span>
                             <span class="meta-label">Autor:</span><span>João Vitor</span>
                         </div>
                         <a href="aula.html" class="curso-btn">Ver Curso</a>
@@ -108,13 +110,12 @@
     </main>
 
     <!-- FOOTER -->
-  
-    <!-- FOOTER -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Sobre</h3>
                 <p>CodeClass - Plataforma de ensino de programação desenvolvida por estudantes para estudantes.</p>
+                <a href="sobre.html" class="team-button">Sobre o Time</a>
             </div>
             <div class="footer-section">
                 <h3>Contato</h3>
@@ -124,9 +125,18 @@
             <div class="footer-section">
                 <h3>Redes Sociais</h3>
                 <div class="social-links">
-                    <a href="#">GitHub</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Instagram</a>
+                    <a href="#" class="social-link">
+                        <img src="Assets/images/Git.png" alt="GitHub">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="Assets/images/Linkedin.png" alt="LinkedIn">
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="Assets/images/insta.png" alt="Instagram">
+                        <span>Instagram</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -136,3 +146,4 @@
     </footer>
     <script src="functions.js"></script>
 </body>
+</html>
