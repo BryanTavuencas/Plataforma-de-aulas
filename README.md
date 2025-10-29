@@ -178,7 +178,7 @@ Contribuições são sempre bem-vindas! Siga estas etapas:
 
 ## 📄 Licença
 
-Este projeto é de código aberto e está disponível sob a licença MIT.
+Este projeto é de código aberto.
 
 ---
 
