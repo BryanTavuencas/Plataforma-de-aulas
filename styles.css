@@ -33,9 +33,9 @@
 /* Espaçamento vertical entre botões de filtro */
 .filtros-botoes {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
 }
 /* Espaçamento vertical entre botões de filtro */
 .filtros-botoes {
@@ -392,10 +392,9 @@ main {
 .filtros {
     background-color: #1a1a2e;
     padding: 2rem;
-    width: 150%;
     border-radius: 10px;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .busca {
@@ -430,63 +429,8 @@ main {
 .filtros-categorias {
     display: flex;
     gap: 1rem;
-    align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1rem;
-    min-height: 80px; /* Aumenta altura mínima */
-}
-
-/* Wrapper para os filtros de nível */
-.filtros-nivel {
-    display: flex;
-    gap: 0.75rem;
     align-items: center;
-}
-
-/* Wrapper para os botões de ação */
-.filtros-botoes {
-    display: flex;
-    gap: 0.75rem;
-    align-items: center;
-}
-
-#btnLimparFiltros, 
-#btnBuscar {
-    width: 110px; /* Reduz largura dos botões */
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .filtros-categorias {
-        flex-direction: column;
-        gap: 0.75rem;
-        padding: 0.75rem;
-    }
-    
-    #btnLimparFiltros, 
-    #btnBuscar {
-        width: 120px;
-    }
-}
-
-@media (max-width: 768px) {
-    .filtros-categorias {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .filtros-nivel,
-    .filtros-botoes {
-        justify-content: center;
-    }
-
-    #btnLimparFiltros, 
-    #btnBuscar {
-        width: 100%;
-    }
 }
 
 .filtros-grid {
@@ -1410,9 +1354,8 @@ main {
 }
 
 .tabs-perfil {
-    background: linear-gradient(145deg, #1a0a1e 0%, #2a0a1a 100%);
+    background: linear-gradient(145deg, #1a1a2e 0%, #2a0a1a 100%);
     border-radius: 12px;
-    width: 150%;
     padding: 2rem;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     border: 1px solid #2a0a1a;
@@ -1616,9 +1559,9 @@ main {
 .estatisticas {
     background: linear-gradient(145deg, #1a1a2e 0%, #2a0a1a 100%);
     border-radius: 12px;
+    padding: 2rem;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     border: 1px solid #2a0a1a;
-    margin-top: 2rem;
 }
 
 .estatisticas h2 {
@@ -1626,27 +1569,27 @@ main {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    border-radius: 12px;
 }
 
 .stats-grid {
     background-color: rgba(26, 26, 46, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #2a0a1a;
     text-align: center;
-    border-radius: 12px;
+}
+
+.stats-grid h3 {
+    color: #e0e0e0;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
 }
 
 .stats-grid p {
-    color: #e0e0e0;
-    font-size: 1.1rem;
-    border-radius: 12px;
-}
-
-.stats-grid strong {
     color: #ff6b9d;
     font-size: 2rem;
     font-weight: bold;
-    display: block;
-    margin-top: 0.5rem;
+    margin: 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 /* ========================================
@@ -1687,27 +1630,15 @@ footer {
     align-items: center;
 }
 
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
+.social-links a {
     color: #e0e0e0;
     text-decoration: none;
-    padding: 0.25rem 0.5rem;
-    border-radius: 6px;
-    transition: background 0.15s ease, color 0.15s ease;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
 }
 
-.social-link img {
-    width: 20px !important;
-    height: 20px !important;
-    object-fit: cover;
-    display: inline-block;
-}
-
-/* opcional: esconder texto em telas muito pequenas */
-@media (max-width: 480px) {
-    .social-link span { display: none; }
+.social-links a:hover {
+    color: #8b0000;
 }
 
 .footer-bottom {
@@ -2067,8 +1998,8 @@ footer {
 @media (max-width: 420px) {
     .busca input { max-width: 100%; padding: 0.6rem 0.8rem; }
     .filtros-grid { grid-template-columns: 1fr; }
-    .filtros-categorias label { padding: 0.4rem 0.8rem; font-size: 0.95rem; }
-    .curso-titulo { font-size: 1rem; }
+    .filtros-categorias label { padding: 0.35rem .8rem; font-size: 0.9rem; }
+    .curso-titulo { font-size: 1.1rem; }
     .hero h1 { font-size: 1.6rem; }
 }
 
@@ -2105,7 +2036,7 @@ img, iframe, video {
     .user-actions form.active { display: block; }
     .busca input { max-width: 100%; }
     .filtros-grid { gap: .75rem 1rem; }
-    .filtros-categorias label { padding: 0.4rem 0.8rem; }
+    .filtros-categorias label { padding: 0.4rem .8rem; }
     .lista-modulos a { padding: 0.6rem; }
     .tab-btn { padding: 0.6rem 0.8rem; }
     .tabs-navigation { gap: .4rem; }
@@ -2127,93 +2058,96 @@ img, iframe, video {
     .filtros-categorias { display: flex; flex-wrap: wrap; gap: .4rem; }
 }
 
-/* Ajuste apenas dos botões de filtro e busca */
-.filtros-botoes {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
-}
+input, button, select, textarea { touch-action: manipulation; }
 
-#btnLimparFiltros, 
-#btnBuscar {
-    width: 150px;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    text-align: center;
-}
-
-.team-button {
-    display: inline-block;
-    background-color: #8b0000;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.team-button:hover {
-    background-color: #a00;
-    text-decoration: none;
-}
-
-.team-section {
+main:has(.tabs-perfil),
+main:has(.perfil-header),
+main:has(.estatisticas) {
+    display: block;
+    max-width: 980px;
+    margin: 2rem auto;
     padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 1.5rem;
+}
+
+.perfil-header {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+}
+
+.foto-perfil {
+    flex: 0 0 auto;
+}
+
+.info-basica {
+    flex: 1 1 280px;
+    min-width: 0; 
+}
+
+.tabs-perfil {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.tabs-navigation {
+    flex-wrap: wrap;
+    gap: .5rem .75rem;
+}
+
+.tab-content {
+    min-height: auto;
+    margin-top: 1rem;
+}
+
+.cursos-em-andamento,
+.certificados-lista,
+.formulario-config,
+.stats-grid {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cursos-em-andamento li,
+.certificados-lista li {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formulario-config {
     align-items: center;
 }
 
-.team-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1200px;
-    padding: 1rem;
-}
-
-.team-member {
-    flex: 0 1 250px;
-    min-width: 250px;
-    max-width: 300px;
-    background: rgba(26, 26, 46, 0.8);
-    border-radius: 12px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.3s ease;
-    border: 1px solid #2a0a1a;
-}
-
-.member-photo {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 1rem;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid #8b0000;
-}
-
-.member-photo img {
+.acoes-perfil,
+.acoes-mudarModo,
+.acoes-deletar {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
-/* Responsividade mantendo centralização */
-@media (max-width: 1200px) {
-    .team-grid {
-        gap: 1.5rem;
-    }
+.cursos-em-andamento a,
+.certificados-lista a {
+    word-break: break-word;
+    display: inline-block;
 }
 
-@media (max-width: 768px) {
-    .team-member {
-        flex: 0 1 280px;
-        min-width: 280px;
-    }
+.estatisticas {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 800px) {
+    .perfil-header { padding: 1rem; gap: 1rem; }
+    .foto-perfil img { width: 100px; height: 100px; }
+    #btnEditarPerfil, #btnModoEscuro, #btnDeletarPerfil { min-width: 160px; padding: 0.6rem 1rem; }
+    main:has(.tabs-perfil),
+    main:has(.perfil-header) { padding: 1rem; margin: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .perfil-header { flex-direction: column; align-items: flex-start; }
+    .info-basica h1 { font-size: 1.6rem; }
+    .tabs-navigation { width: 100%; }
+    .tab-btn { padding: 0.5rem 0.9rem; font-size: 0.95rem; }
 }
