@@ -16,6 +16,8 @@ plataforma-de-aulas/
 ├── 📄 index.html          # Página inicial
 ├── 📄 cursos.html         # Catálogo de cursos
 ├── 📄 aula.html           # Visualização de aulas
+├── 📄 review.html           # Aba para futura interação entre usuario e time
+├── 📄 sobre.html           # Sobre a equipe de desenvolvimento
 ├── 📄 perfil.html         # Perfil do usuário
 │
 ├── 🎨 styles.css          # Estilos globais
